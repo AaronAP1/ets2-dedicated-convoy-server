@@ -25,6 +25,8 @@ RUN mkdir -p "${SAVEGAME_LOCATION}" \
     && mkdir -p /default_packages
 
 COPY ets_server_entrypoint.py /ets_server_entrypoint.py
+COPY active_users_api.py /active_users_api.py
+COPY status_reporter.py /status_reporter.py
 COPY entrypoint.sh /entrypoint
 COPY VERSION /version
 RUN chmod +x /entrypoint

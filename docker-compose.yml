@@ -16,48 +16,61 @@ services:
     #  - "27016:27016"
     #  - "27015:27015/udp"
     #  - "27016:27016/udp"
-    # volumes:
+    volumes:
     # Server files. (executable, libraries)
     # Only mount if you know what you are doing. Can lead to permissions issues.
     #  - "/opt/ets2-server/game-data:/app"
     # Only needed when using custom server_packages.sii and server_packages.dat.
     # Also keeps banlist. If you want to persist the banlist mount this folder.
-    #  - "/opt/ets2-server/save-data:/home/steam/.local/share/Euro Truck Simulator 2"
+      - "./save-data:/home/steam/.local/share/Euro Truck Simulator 2"
     environment:
       - "ETS_SERVER_UPDATE_ON_START=true"
-      - "ETS_SERVER_NAME=My Server"
-      - "ETS_SERVER_DESCRIPTION=My server description"
-      - "ETS_SERVER_WELCOME_MESSAGE=Welcome to my server!"
-      - "ETS_SERVER_PASSWORD=abc123"
-      - "ETS_SERVER_MAX_PLAYERS=8"
+      - "ETS_SERVER_NAME=AndesMP Server"
+      - "ETS_SERVER_DESCRIPTION=AndesMP Server"
+      - "ETS_SERVER_WELCOME_MESSAGE=Bienvenido a AndesMP!"
+      - "ETS_SERVER_PASSWORD="
+      - "ETS_SERVER_MAX_PLAYERS=128"
       - "ETS_SERVER_PORT=27015"
       - "ETS_SERVER_QUERY_PORT=27016"
+      # Token persistente para que el server ID (direct search) no cambie en cada reinicio.
+      # Generalo en: https://steamcommunity.com/dev/managegameservers (AppID ETS2: 227300)
+      - "ETS_SERVER_LOGON_TOKEN=5E3ABAC842AEC2EF8128CFD4A0F18542"
+      # Moderadores (SteamID64) separados por coma.
+      - "ETS_SERVER_MODERATORS=76561199220962922,76561198858304637"
+      - "ETS_STATUS_API_ENABLED=true"
+      - "ETS_STATUS_API_PORT=8080"
+      - "ETS_STATUS_API_PATH=/active-users"
+      - "ETS_STATUS_SERVER_ID=andesmp-ets2-prod"
+      - "ETS_STATUS_PUSH_ENABLED=false"
+      - "ETS_STATUS_PUSH_URL=https://tu-api-id.execute-api.us-east-1.amazonaws.com/prod/report"
+      - "ETS_STATUS_PUSH_TOKEN=cambia-este-token"
+      - "ETS_STATUS_PUSH_INTERVAL_SEC=30"
       # more variables...
 
-  ats-server:
-    image: lshallo/ats-convoy-server
-    # image: ghcr.io/lshallo/ats-convoy-server # GitHub container registry
-    container_name: ats-server
-    restart: unless-stopped
-    tty: true
-    network_mode: host # important to make game appear in server list
-    # if you want to join via direct join token (displayed in logs on startup) you can use port mapping
-    # the game will not appear in server list because the server can't determine the external IP
-    #ports:
-    #  - "27015:27015"
-    #  - "27016:27016"
-    #  - "27015:27015/udp"
-    #  - "27016:27016/udp"
-    # volumes:
-    #  - "/opt/ats-server/game-data:/app" # server files
-    #  - "/opt/ats-server/save-data:/home/steam/.local/share/American Truck Simulator" # Only needed when using custom server_packages.sii and server_packages.dat
-    environment:
-      - "ETS_SERVER_UPDATE_ON_START=true"
-      - "ETS_SERVER_NAME=My Server"
-      - "ETS_SERVER_DESCRIPTION=My server description"
-      - "ETS_SERVER_WELCOME_MESSAGE=Welcome to my server!"
-      - "ETS_SERVER_PASSWORD=abc123"
-      - "ETS_SERVER_MAX_PLAYERS=8"
-      - "ETS_SERVER_PORT=27015"
-      - "ETS_SERVER_QUERY_PORT=27016"
-      # more variables...
+  # ats-server:
+  #   image: lshallo/ats-convoy-server
+  #   # image: ghcr.io/lshallo/ats-convoy-server # GitHub container registry
+  #   container_name: ats-server
+  #   restart: unless-stopped
+  #   tty: true
+  #   network_mode: host # important to make game appear in server list
+  #   # if you want to join via direct join token (displayed in logs on startup) you can use port mapping
+  #   # the game will not appear in server list because the server can't determine the external IP
+  #   #ports:
+  #   #  - "27015:27015"
+  #   #  - "27016:27016"
+  #   #  - "27015:27015/udp"
+  #   #  - "27016:27016/udp"
+  #   # volumes:
+  #   #  - "/opt/ats-server/game-data:/app" # server files
+  #   #  - "/opt/ats-server/save-data:/home/steam/.local/share/American Truck Simulator" # Only needed when using custom server_packages.sii and server_packages.dat
+  #   environment:
+  #     - "ETS_SERVER_UPDATE_ON_START=true"
+  #     - "ETS_SERVER_NAME=My Server"
+  #     - "ETS_SERVER_DESCRIPTION=My server description"
+  #     - "ETS_SERVER_WELCOME_MESSAGE=Welcome to my server!"
+  #     - "ETS_SERVER_PASSWORD=abc123"
+  #     - "ETS_SERVER_MAX_PLAYERS=8"
+  #     - "ETS_SERVER_PORT=27015"
+  #     - "ETS_SERVER_QUERY_PORT=27016"
+  #     # more variables...
