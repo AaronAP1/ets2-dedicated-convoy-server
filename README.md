@@ -54,6 +54,39 @@ You can check the logs with `docker compose logs -f`.
 Update the server with `docker compose pull && docker compose up -d`.
 Stop the server with `docker compose stop` and remove it with `docker compose down`.
 
+## Local Control API (send commands/chat)
+---
+When the container starts, it can also open a local HTTP API that injects commands into the ETS2/ATS dedicated server console.
+
+Default config:
+- `ETS_CONTROL_API_ENABLED=true`
+- `ETS_CONTROL_API_HOST=0.0.0.0`
+- `ETS_CONTROL_API_PORT=8081`
+- `ETS_CONTROL_API_TOKEN=` (optional bearer token)
+- `ETS_CONTROL_CHAT_TEMPLATE=say {message}`
+
+### Endpoints
+- `GET /health`
+- `POST /command` with JSON body: `{"command":"/set_time 12:30"}`
+- `POST /chat` with JSON body: `{"message":"Bienvenidos al convoy"}`
+
+If `ETS_CONTROL_API_TOKEN` is set, include header:
+`Authorization: Bearer <token>`
+
+Examples:
+
+```bash
+curl -X POST http://127.0.0.1:8081/command \
+    -H "Content-Type: application/json" \
+    -d '{"command":"/set_time 06:00"}'
+```
+
+```bash
+curl -X POST http://127.0.0.1:8081/chat \
+    -H "Content-Type: application/json" \
+    -d '{"message":"Servidor reinicia en 10 minutos"}'
+```
+
 # Server Configuration
 ## Environment Variables
 ---

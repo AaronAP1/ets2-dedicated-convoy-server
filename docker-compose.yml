@@ -3,6 +3,7 @@
 
 services:
   ets2-server:
+    build: .
     image: lshallo/ets2-convoy-server
     # image: ghcr.io/lshallo/ets2-convoy-server # GitHub container registry
     container_name: ets2-server
@@ -24,27 +25,17 @@ services:
     # Also keeps banlist. If you want to persist the banlist mount this folder.
       - "./save-data:/home/steam/.local/share/Euro Truck Simulator 2"
     environment:
-      - "ETS_SERVER_UPDATE_ON_START=true"
-      - "ETS_SERVER_NAME=AndesMP Server"
-      - "ETS_SERVER_DESCRIPTION=AndesMP Server"
-      - "ETS_SERVER_WELCOME_MESSAGE=Bienvenido a AndesMP!"
+      - "ETS_SERVER_UPDATE_ON_START=false"
+      - "ETS_SERVER_NAME=PERU IM"
+      - "ETS_SERVER_DESCRIPTION=IMPeru Server"
+      - "ETS_SERVER_WELCOME_MESSAGE=Bienvenido a IMPeru!"
       - "ETS_SERVER_PASSWORD="
       - "ETS_SERVER_MAX_PLAYERS=128"
       - "ETS_SERVER_PORT=27015"
       - "ETS_SERVER_QUERY_PORT=27016"
-      # Token persistente para que el server ID (direct search) no cambie en cada reinicio.
-      # Generalo en: https://steamcommunity.com/dev/managegameservers (AppID ETS2: 227300)
-      - "ETS_SERVER_LOGON_TOKEN=5E3ABAC842AEC2EF8128CFD4A0F18542"
+      - "ETS_SERVER_LOGON_TOKEN=F492F770192BA0A0D636EF7AFB867F80"
       # Moderadores (SteamID64) separados por coma.
       - "ETS_SERVER_MODERATORS=76561199220962922,76561198858304637"
-      - "ETS_STATUS_API_ENABLED=true"
-      - "ETS_STATUS_API_PORT=8080"
-      - "ETS_STATUS_API_PATH=/active-users"
-      - "ETS_STATUS_SERVER_ID=andesmp-ets2-prod"
-      - "ETS_STATUS_PUSH_ENABLED=false"
-      - "ETS_STATUS_PUSH_URL=https://tu-api-id.execute-api.us-east-1.amazonaws.com/prod/report"
-      - "ETS_STATUS_PUSH_TOKEN=cambia-este-token"
-      - "ETS_STATUS_PUSH_INTERVAL_SEC=30"
       # more variables...
 
   # ats-server:

@@ -13,6 +13,8 @@ def server_files_exist() -> bool:
     Uses env variable `EXECUTABLE` as path to check.
     """
     executable_path = os.getenv("EXECUTABLE")
+    if not executable_path:
+        return False
     return os.path.isfile(executable_path)
 
 
@@ -58,7 +60,7 @@ def get_current_max_players(config_ds: str) -> int:
         return 0
     with open(config_ds, "r") as f:
         while line := f.readline():
-            if line.find('g_max_convoy_size'):
+            if line.find('g_max_convoy_size') != -1:
                 return int(re.search(r"(\d+)", line).group(1))
 
 def max_player_workaround(config_ds: str, max_players: int):
@@ -74,12 +76,16 @@ def max_player_workaround(config_ds: str, max_players: int):
         logging.warning("config_ds.cfg does not exist. This is probably since this is the first start.")
         logging.warning("Please restart the container `docker compose restart` to apply player limit workaround.")
     
-    os.chmod(config_ds, 0o600)
+    try:
+        os.chmod(config_ds, 0o600)
+    except PermissionError:
+        logging.warning("Could not change permissions for config_ds.cfg; continuing with existing file permissions.")
+
     with open(config_ds, "r") as f:
         lines = f.readlines()
         for id, line in enumerate(lines):
             if line.find("g_max_convoy_size") != -1:
-                lines[id] = re.sub("\d+", str(max_players), line)
+                lines[id] = re.sub(r"\d+", str(max_players), line)
         
         with open(config_ds, "w+") as fw:
             if fw.writable():
@@ -88,7 +94,10 @@ def max_player_workaround(config_ds: str, max_players: int):
             else:
                 logging.error("config_ds.cfg not writable.")
 
-    os.chmod(config_ds, 0o400)
+    try:
+        os.chmod(config_ds, 0o400)
+    except PermissionError:
+        logging.warning("Could not restore permissions for config_ds.cfg; leaving existing permissions unchanged.")
 
 
 def generate_config() -> str:

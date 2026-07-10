@@ -1,747 +1,1182 @@
-************ : log created on : Tuesday March 31 2026 @ 22:26:22
+************ : log created on : Friday July 10 2026 @ 01:17:09
 00:00:00.000 : [sys] running on x86_64 / Linux
 00:00:00.000 : [sys] Command line:  /app/bin/linux_x64/eurotrucks2_server
-00:00:00.000 : [cpu] CPU0: GenuineIntel [11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz] with 8 cores (16 threads) at ~2303MHz.
-00:00:00.001 : [sys] using 6 worker thread(s)
-00:00:00.001 : [sys] and 3 worker threads for IO.
-00:00:00.001 : [sys] plus 3 real-time worker threads.
-00:00:00.001 : [sys] using CGT CLOCK_MONOTONIC_RAW timer with 1nsec resolution.
-00:00:00.002 : [mem] physical total: 7828M
-00:00:00.002 : [mem] physical avail: 6028M
-00:00:00.002 : [mem] virtual total: 17592186044415M
-00:00:00.003 : [mem] virtual avail: 17592186044415M
-00:00:00.003 : [mem] Trying to allocate memory pool (2097152K)
-00:00:00.003 : [mem] Allocated 128 MBs for temporary loading buffers
-00:00:00.022 : [hashfs] version.scs: Created and validated, 2 entries (E91DBC383D3F9B49E803A609A42C0BAC1A515BC3CBAE4295BB87B26A8D5EF9BD)
-00:00:00.023 : [hashfs] version.scs: Unmounted.
-00:00:00.023 : [ufs] Loaded pack set version 1.58.0.192 created at 1770203450
-00:00:00.029 : [hashfs] effect.scs: Created and validated, 23125 entries (056278EC78CDAE62895FA73AB03CF3C525FC8731BE4A6C0827445A209D7B770C)
-00:00:00.029 : [fs] device /app/effect.scs mounted.
-00:00:00.030 : [hashfs] base.scs: Created and validated, 2276 entries (FA9E3B3DF7558455514E0D8D6589E20AB72B167D587E9D37503BC47166027913)
-00:00:00.031 : [fs] device /app/base.scs mounted.
-00:00:00.031 : [hashfs] base_map.scs: Created and validated, 1408 entries (B9B05055F6BD8001177BBE127C9E2A490AE8728ECC4068D89DF38D1E1C8DD1B3)
-00:00:00.032 : [fs] device /app/base_map.scs mounted.
-00:00:00.033 : [hashfs] base_vehicle.scs: Created and validated, 1974 entries (4889842AC42764FE0AFCC9D79D2000F1292E9D809C19327CC9FEF8B65ABD4512)
-00:00:00.033 : [fs] device /app/base_vehicle.scs mounted.
-00:00:00.034 : [hashfs] base_share.scs: Created and validated, 1300 entries (4F373828E362FF5ACE3A0B23DBC0BB97B057AEB05F522D8283D9F83A17098AD0)
-00:00:00.034 : [fs] device /app/base_share.scs mounted.
-00:00:00.107 : [hashfs] def.scs: Created and validated, 64656 entries (CFCEAFA43764443A898937F0EB66DAED163E0AB30424CCDCEB4A5737816D0AB3)
-00:00:00.107 : [fs] device /app/def.scs mounted.
-00:00:00.108 : [hashfs] core.scs: Created and validated, 9 entries (E7FD485299D3B6D5B59D9E6483C5D732D6CDF9B8AEFA11611E910C1BCBD174B0)
-00:00:00.108 : [fs] device /app/core.scs mounted.
-00:00:00.118 : [hashfs] locale.scs: Created and validated, 394 entries (960B8D4E9C64E4DB46731FEBB5987C433A99AA9FFBACF698C8DFC1A996EE4C8F)
-00:00:00.119 : [fs] device /app/locale.scs mounted.
-00:00:00.119 : [hashfs] base_cfg.scs: Created and validated, 1 entries (9629430476A6F97ED68F0BA1C3299F45962B03EE58AF2533C9B872A0C0332DE1)
-00:00:00.120 : [fs] device /app/base_cfg.scs mounted.
-00:00:00.120 : [ufs] Home directory: '/home/steam/.local/share/Euro Truck Simulator 2'.
-00:00:00.120 : [fs] device /home/steam/.local/share/Euro Truck Simulator 2 mounted.
-00:00:00.275 : exec /home/config_ds.cfg
-00:00:00.278 : [sys] Executing /home/config_ds.cfg ...
-00:00:00.282 : uset r_hdr_display_gray_offset "0.0"
-00:00:00.283 : uset r_hdr_display_white "-1.0"
-00:00:00.283 : uset r_hdr_display_black "-1.0"
-00:00:00.283 : uset r_sdr_display_gray_offset "0.0"
-00:00:00.283 : uset r_sdr_display_white "-1.0"
-00:00:00.284 : uset r_sdr_display_black "-1.0"
-00:00:00.286 : uset r_far_shadow_disable "0"
-00:00:00.288 : uset r_show_sun_cascades "0"
-00:00:00.289 : uset r_tonemap_debug "0"
-00:00:00.290 : uset r_taa_modulated_drr_strength "0.0"
-00:00:00.290 : uset r_drr_strength "8.0"
-00:00:00.291 : uset r_use_depth_bounds "1"
-00:00:00.292 : uset r_hide_helpers "0"
-00:00:00.292 : uset s_sound_debug "0"
-00:00:00.292 : uset s_init_intro_music_mute "0"
-00:00:00.293 : uset s_init_intro_music_volume "0.5"
-00:00:00.295 : uset s_init_ui_music_mute "0"
-00:00:00.295 : uset s_init_ui_music_volume "0.5"
-00:00:00.296 : uset s_init_master_mute "0"
-00:00:00.296 : uset s_init_master_volume "0.75"
-00:00:00.296 : uset s_output_driver ""
-00:00:00.297 : uset s_live_update "0"
-00:00:00.297 : uset s_suspend_sound "1"
-00:00:00.297 : uset g_mm_help_shown "0"
-00:00:00.298 : uset g_frame_image_fmt "jpg"
-00:00:00.298 : uset g_frames_path ""
-00:00:00.298 : uset g_convoy_allow_load "0"
-00:00:00.299 : uset g_max_convoy_size "128"
-00:00:00.300 : uset g_last_hidden_dlc_widget_name ""
-00:00:00.300 : uset g_last_seen_dlc_release_date "0"
-00:00:00.301 : uset g_last_seen_patch_notes_hash "0"
-00:00:00.302 : uset g_academy_book_count "0"
-00:00:00.304 : uset g_anti_slip "1"
-00:00:00.305 : uset g_abs "1"
-00:00:00.305 : uset g_bumps "1.0"
-00:00:00.307 : uset g_editor_zoom_speed "1.0"
-00:00:00.308 : uset g_map_note_user_id "0"
-00:00:00.309 : uset g_color_feedback "1"
-00:00:00.309 : uset g_disable_hud_activation "0"
-00:00:00.310 : uset g_interior_camera_zero_pitch "0"
-00:00:00.310 : uset r_multimon_exterior_in_aux "0"
-00:00:00.310 : uset r_multimon_interior_in_main "1"
-00:00:00.311 : uset r_multimon_rotation_aux "0"
-00:00:00.313 : uset r_multimon_rotation_right "0"
-00:00:00.314 : uset r_multimon_rotation_left "0"
-00:00:00.314 : uset r_multimon_rotation_center "0"
-00:00:00.316 : uset r_multimon_vert_offset_right "0"
-00:00:00.317 : uset r_multimon_vert_offset_left "0"
-00:00:00.317 : uset r_multimon_border_fov_right "0"
-00:00:00.317 : uset r_multimon_border_fov_left "0"
-00:00:00.318 : uset r_multimon_fov_vertical "0"
-00:00:00.318 : uset r_multimon_fov_horizontal "50"
-00:00:00.318 : uset r_multimon_mode "0"
-00:00:00.319 : uset r_buffer_page_size "10"
-00:00:00.320 : uset r_deferred_debug "0"
-00:00:00.321 : uset r_mirror_scale_y "1.0"
-00:00:00.321 : uset r_mirror_scale_x "1.0"
-00:00:00.322 : uset r_scale_y "1.0"
-00:00:00.323 : uset r_scale_x "1.0"
-00:00:00.323 : uset r_normal_maps "1"
-00:00:00.324 : uset r_sunshafts "1"
-00:00:00.324 : uset r_color_saturation "1.0"
-00:00:00.325 : uset r_color_yellow_blue "0.0"
-00:00:00.325 : uset r_color_magenta_green "0.0"
-00:00:00.329 : uset r_color_cyan_red "0.0"
-00:00:00.330 : uset r_color_correction "1"
-00:00:00.330 : uset r_light_flares "1"
-00:00:00.331 : uset r_cloud_shadows "1"
-00:00:00.331 : uset r_dof_filter_size "0.5"
-00:00:00.331 : uset r_dof_transition "400.0"
-00:00:00.332 : uset r_dof_start "200.0"
-00:00:00.332 : uset r_dof "1"
-00:00:00.332 : uset r_ssao "2"
-00:00:00.333 : uset r_taa_luma_sharpen "1.0"
-00:00:00.335 : uset r_taa_tuning "0"
-00:00:00.336 : uset r_aa "6"
-00:00:00.336 : uset r_interior_shadow "1"
-00:00:00.336 : uset r_fake_shadows "2"
-00:00:00.337 : uset r_sun_shadow_texture_size "4096"
-00:00:00.337 : uset r_sun_shadow_quality "3"
-00:00:00.338 : uset r_mirror_group "3"
-00:00:00.339 : uset r_mirror_view_distance "80.0"
-00:00:00.339 : uset r_deferred_mirrors "1"
-00:00:00.340 : uset r_nowmi "0"
-00:00:00.342 : uset r_startup_progress "0"
-00:00:00.342 : uset r_setup_done "0"
-00:00:00.342 : uset r_peak_brightness "1.0"
-00:00:00.344 : uset r_hmd_controller_shadows "0"
-00:00:00.344 : uset r_hmd_draw_controllers "0"
-00:00:00.345 : uset r_hmd_water_pixels_per_deg "20.0"
-00:00:00.345 : uset r_ipd_scale "1.0"
-00:00:00.346 : uset r_manual_stereo_mirror_mode "1"
-00:00:00.346 : uset r_manual_stereo_ui_lod_bias "-0.75"
-00:00:00.347 : uset r_manual_stereo_ui_mipmaps "1"
-00:00:00.347 : uset r_manual_stereo_ui_buffer_scale "2.0"
-00:00:00.351 : uset r_manual_stereo_buffer_scale "1.0"
-00:00:00.353 : uset r_manual_stereo_ui_pitch_game "-10.0"
-00:00:00.356 : uset r_manual_stereo_ui_yaw_game "-40.0"
-00:00:00.358 : uset r_manual_stereo_ui_pitch "-30.0"
-00:00:00.363 : uset r_manual_stereo_ui_yaw "0.0"
-00:00:00.365 : uset r_manual_stereo_ui_y_game "-0.2"
-00:00:00.366 : uset r_manual_stereo_ui_x_game "0.5"
-00:00:00.384 : uset r_manual_stereo_ui_y "-0.5"
-00:00:00.388 : uset r_manual_stereo_ui_x "0.0"
-00:00:00.393 : uset r_manual_stereo_ui_static_fov "40"
-00:00:00.401 : uset r_manual_stereo_ui_fov_game "100"
-00:00:00.408 : uset r_manual_stereo_ui_fov "65"
-00:00:00.413 : uset r_manual_stereo_ui_radius_game "0.0"
-00:00:00.414 : uset r_manual_stereo_ui_radius "3.0"
-00:00:00.415 : uset r_manual_stereo_ui_dist_game "0.5"
-00:00:00.421 : uset r_manual_stereo_ui_dist "1"
-00:00:00.422 : uset r_minimal_unfinished_frames "0"
-00:00:00.424 : uset r_no_frame_tracking "0"
-00:00:00.426 : uset r_mode_refresh "0"
-00:00:00.428 : uset r_mode_height "0"
-00:00:00.429 : uset r_mode_width "0"
-00:00:00.430 : uset r_path ""
-00:00:00.436 : uset r_device ""
-00:00:00.441 : uset i_cursor_semantic_force_spd_mlt "0.35"
-00:00:00.444 : uset i_cursor_force_spd_mlt "0.75"
-00:00:00.448 : uset i_controller_cursor_speed "800.0"
-00:00:00.455 : uset g_stream_exts ".ogg;.mp3"
-00:00:00.462 : uset g_album_image "0"
-00:00:00.466 : uset g_thrustmaster "1"
-00:00:00.470 : uset g_tobii "1"
-00:00:00.472 : uset g_trackir "1"
-00:00:00.473 : uset g_lod_factor_pedestrian "1.0"
-00:00:00.474 : uset g_pedestrian "1"
-00:00:00.474 : uset g_light_span_factor "1.0"
-00:00:00.475 : uset g_light_distance_factor "1.0"
-00:00:00.477 : uset g_vehicle_flare_lights "1"
-00:00:00.478 : uset g_auto_traffic_headlights "1"
-00:00:00.479 : uset g_lod_factor_parked "1.0"
-00:00:00.480 : uset g_lod_factor_traffic "1.0"
-00:00:00.485 : uset g_traffic "1.0"
-00:00:00.490 : uset g_kdop_preview "0"
-00:00:00.496 : uset g_screenshot_on_bug_quality "100"
-00:00:00.496 : uset g_screenshot_on_bug "0"
-00:00:00.499 : uset g_debug_map_limits "0"
-00:00:00.504 : uset g_city_name_move "0"
-00:00:00.507 : uset g_assert_dump "0"
-00:00:00.509 : uset g_developer "0"
-00:00:00.510 : uset g_semantical_pause_inactivity "120"
-00:00:00.513 : uset g_pause_on_disconnect "1"
-00:00:00.514 : uset g_semantical_ff_inactivity "300"
-00:00:00.516 : uset g_steam_rich_presence "1"
-00:00:00.516 : uset g_steam_browser "1"
-00:00:00.517 : uset g_steam_screenshots "2"
-00:00:00.517 : uset g_artist_id "0"
-00:00:00.519 : uset g_save_format "0"
-00:00:00.519 : uset g_trailer_cables_mode "2"
-00:00:00.519 : uset g_intelligent_transmission "0"
-00:00:00.522 : uset g_spec_trans_refill_tank "1"
-00:00:00.525 : uset g_flyspeed "100.0"
-00:00:00.528 : uset g_online_loading_screens "-1"
-00:00:00.528 : uset g_news "-1"
-00:00:00.529 : uset g_lang_init "en_gb"
-00:00:00.530 : uset g_col_offset_factor "1.0"
-00:00:00.530 : uset g_col_fill_backface "0"
-00:00:00.531 : uset g_col_fill_alpha "0.0"
-00:00:00.531 : uset g_colbox "0"
-00:00:00.532 : uset g_radio_mode "2"
-00:00:00.532 : uset g_ignore_low_fps "0"
-00:00:00.532 : uset g_truck_light_specular "1"
-00:00:00.532 : uset g_gfx_all_scales "0"
-00:00:00.533 : uset g_gfx_advanced "0"
-00:00:00.534 : uset g_gfx_quality "-1"
-00:00:00.535 : uset g_hq_3d_scale "0.0"
-00:00:00.535 : uset g_hq_3d_screenshot "0"
-00:00:00.536 : uset g_menu_aa_limit "8"
-00:00:00.536 : uset g_additional_water_fov "20.0f"
-00:00:00.537 : uset g_water_reflect_actor "0"
-00:00:00.538 : uset g_rain_sensor "0"
-00:00:00.540 : uset g_rain_reflect_hookups "1"
-00:00:00.540 : uset g_rain_reflect_actor "1"
-00:00:00.541 : uset g_rain_reflect_traffic "1"
-00:00:00.542 : uset g_rain_reflect_cache "1"
-00:00:00.542 : uset g_rain_reflection "3"
-00:00:00.542 : uset g_reflection_scale "0"
-00:00:00.543 : uset g_reflection "3"
-00:00:00.543 : uset g_grass_density "2"
-00:00:00.543 : uset g_veg_detail "2"
-00:00:00.544 : uset g_save_indicator "1"
-00:00:00.544 : uset g_game_version "0"
-00:00:00.545 : uset g_force_online_lscrs "0"
-00:00:00.545 : uset g_hw_info "1"
-00:00:00.546 : uset g_glass_debugging_level "0"
-00:00:00.546 : uset g_line_sort "0"
-00:00:00.546 : uset g_cargo_sort "0"
-00:00:00.547 : uset g_bloom_standard_deviation "0.5"
-00:00:00.547 : uset g_bloom_override "0"
-00:00:00.547 : uset g_bloom "1.0"
-00:00:00.548 : uset g_global_force_load_selector "0"
-00:00:00.549 : uset g_desktop_fadeout "60"
-00:00:00.549 : uset g_item_check_speed "-1"
-00:00:00.549 : uset g_debug_allocators "-1"
-00:00:00.550 : uset g_suspension_auto_reset "1"
-00:00:00.550 : uset g_upshift_coef "0.3"
-00:00:00.550 : uset g_downshift_coef "0.8"
-00:00:00.551 : uset g_minicon "0"
-00:00:00.551 : uset g_console_state "0"
-00:00:00.551 : uset g_console "0"
-00:00:00.551 : uset g_fps "0"
-00:00:00.552 : uset ui_tooltip_delay "0.4"
-00:00:00.552 : uset r_imgui_scale "1.0"
-00:00:00.552 : uset r_windowed_borderless "-1"
-00:00:00.553 : uset r_fullscreen_borderless "-1"
-00:00:00.553 : uset r_fullscreen "1"
-00:00:00.553 : uset r_output "-1"
-00:00:00.553 : uset r_adapter "-1"
-00:00:00.554 : uset r_vsync "1"
-00:00:00.554 : uset r_anisotropy_factor "0.25"
-00:00:00.554 : uset r_texture_detail "0"
-00:00:00.554 : uset v_bug_break "0"
-00:00:00.555 : uset t_ignore_hmd_timing "0"
-00:00:00.555 : uset t_limit_fps_inactive "30"
-00:00:00.555 : uset t_limit_fps "300"
-00:00:00.555 : uset t_locked_fps "0"
-00:00:00.556 : uset t_averaging_window_duration "100"
-00:00:00.556 : uset t_averaging_window_length "10"
-00:00:00.557 : <ERROR> [fs] Failed to open file '/home/config_ds.cfg' in the create_truncate mode.
-00:00:00.559 : <WARNING> [cvar] Can not create file '</home/steam/.local/share/Euro Truck Simulator 2 | /home>/config_ds.cfg'.
-00:00:00.560 : <ERROR> [fs] Failed to open file '/home/config_ds.cfg' in the create_truncate mode.
-00:00:00.562 : <WARNING> [cvar] Can not create file '</home/steam/.local/share/Euro Truck Simulator 2 | /home>/config_ds.cfg'.
-00:00:00.563 : [lang] Language autodetection: 0
-00:00:00.601 : Selected language: en_gb
-00:00:00.602 : Euro Truck Simulator 2 init ver.1.58.0.192s (rev. 4e60bcb4745a)
-00:00:00.617 : <ERROR> [fs] Failed to open file '/home/config_ds.cfg' in the create_truncate mode.
-00:00:00.619 : <WARNING> [cvar] Can not create file '</home/steam/.local/share/Euro Truck Simulator 2 | /home>/config_ds.cfg'.
-00:00:00.619 : Banlist loading...
-00:00:00.620 : === BAN LIST ===
-00:00:00.620 : ================
-00:00:00.621 : dispatch
-00:00:00.621 : server_cfg
-00:00:00.633 : server
-00:00:00.644 : [mods] Active 0 mods (local: 0, workshop: 0)
-00:00:00.759 : <WARNING> Missing default icon for cargo 'acetylene'.
-00:00:00.760 : <WARNING> Missing default icon for cargo 'acid'.
-00:00:00.760 : <WARNING> Missing default icon for cargo 'air_mails'.
-00:00:00.760 : <WARNING> Missing default icon for cargo 'aircft_tires'.
-00:00:00.761 : <WARNING> Missing default icon for cargo 'almond'.
-00:00:00.761 : <WARNING> Missing default icon for cargo 'alu_ingot'.
-00:00:00.761 : <WARNING> Missing default icon for cargo 'alu_profile'.
-00:00:00.761 : <WARNING> Missing default icon for cargo 'ammonia'.
-00:00:00.762 : <WARNING> Missing default icon for cargo 'ammunition'.
-00:00:00.762 : <WARNING> Missing default icon for cargo 'apples'.
-00:00:00.762 : <WARNING> Missing default icon for cargo 'apples_c'.
-00:00:00.762 : <WARNING> Missing default icon for cargo 'arsenic'.
-00:00:00.762 : <WARNING> Missing default icon for cargo 'atl_cod_flt'.
-00:00:00.763 : <WARNING> Missing default icon for cargo 'backfl_prev'.
-00:00:00.763 : <WARNING> Missing default icon for cargo 'barley'.
-00:00:00.763 : <WARNING> Missing default icon for cargo 'basil'.
-00:00:00.763 : <WARNING> Missing default icon for cargo 'battery'.
-00:00:00.763 : <WARNING> Missing default icon for cargo 'beans'.
-00:00:00.764 : <WARNING> Missing default icon for cargo 'beef_meat'.
-00:00:00.764 : <WARNING> Missing default icon for cargo 'beverages'.
-00:00:00.764 : <WARNING> Missing default icon for cargo 'beverages_c'.
-00:00:00.764 : <WARNING> Missing default icon for cargo 'beverages_t'.
-00:00:00.765 : <WARNING> Missing default icon for cargo 'big_bag_seed'.
-00:00:00.765 : <WARNING> Missing default icon for cargo 'boric_acid'.
-00:00:00.765 : <WARNING> Missing default icon for cargo 'bottle_water'.
-00:00:00.765 : <WARNING> Missing default icon for cargo 'brake_fluid'.
-00:00:00.765 : <WARNING> Missing default icon for cargo 'brake_pads'.
-00:00:00.766 : <WARNING> Missing default icon for cargo 'bricks'.
-00:00:00.766 : <WARNING> Missing default icon for cargo 'can_sardines'.
-00:00:00.766 : <WARNING> Missing default icon for cargo 'canned_beans'.
-00:00:00.766 : <WARNING> Missing default icon for cargo 'canned_beef'.
-00:00:00.766 : <WARNING> Missing default icon for cargo 'canned_pork'.
-00:00:00.767 : <WARNING> Missing default icon for cargo 'canned_tuna'.
-00:00:00.767 : <WARNING> Missing default icon for cargo 'car_balt1'.
-00:00:00.767 : <WARNING> Missing default icon for cargo 'car_balt2'.
-00:00:00.767 : <WARNING> Missing default icon for cargo 'car_d'.
-00:00:00.767 : <WARNING> Missing default icon for cargo 'car_f'.
-00:00:00.768 : <WARNING> Missing default icon for cargo 'car_gr'.
-00:00:00.768 : <WARNING> Missing default icon for cargo 'car_ibe'.
-00:00:00.768 : <WARNING> Missing default icon for cargo 'car_it'.
-00:00:00.768 : <WARNING> Missing default icon for cargo 'caravans'.
-00:00:00.769 : <WARNING> Missing default icon for cargo 'carb_water'.
-00:00:00.769 : <WARNING> Missing default icon for cargo 'carbn_pwdr_c'.
-00:00:00.769 : <WARNING> Missing default icon for cargo 'carrots'.
-00:00:00.769 : <WARNING> Missing default icon for cargo 'carrots_c'.
-00:00:00.769 : <WARNING> Missing default icon for cargo 'cars_fr'.
-00:00:00.770 : <WARNING> Missing default icon for cargo 'cauliflower'.
-00:00:00.770 : <WARNING> Missing default icon for cargo 'caviar'.
-00:00:00.770 : <WARNING> Missing default icon for cargo 'cement'.
-00:00:00.770 : <WARNING> Missing default icon for cargo 'cheese'.
-00:00:00.771 : <WARNING> Missing default icon for cargo 'chem_sorb_c'.
-00:00:00.771 : <WARNING> Missing default icon for cargo 'chem_sorbent'.
-00:00:00.771 : <WARNING> Missing default icon for cargo 'chemicals'.
-00:00:00.772 : <WARNING> Missing default icon for cargo 'chewing_gums'.
-00:00:00.772 : <WARNING> Missing default icon for cargo 'chicken_meat'.
-00:00:00.772 : <WARNING> Missing default icon for cargo 'chimney_syst'.
-00:00:00.772 : <WARNING> Missing default icon for cargo 'chlorine'.
-00:00:00.773 : <WARNING> Missing default icon for cargo 'chlorine_t'.
-00:00:00.773 : <WARNING> Missing default icon for cargo 'chocolate'.
-00:00:00.773 : <WARNING> Missing default icon for cargo 'clothes'.
-00:00:00.773 : <WARNING> Missing default icon for cargo 'clothes_c'.
-00:00:00.774 : <WARNING> Missing default icon for cargo 'coal'.
-00:00:00.774 : <WARNING> Missing default icon for cargo 'coconut_milk'.
-00:00:00.774 : <WARNING> Missing default icon for cargo 'coconut_oil'.
-00:00:00.774 : <WARNING> Missing default icon for cargo 'comp_process'.
-00:00:00.774 : <WARNING> Missing default icon for cargo 'conc_juice_t'.
-00:00:00.775 : <WARNING> Missing default icon for cargo 'concen_juice'.
-00:00:00.775 : <WARNING> Missing default icon for cargo 'concr_beams2'.
-00:00:00.775 : <WARNING> Missing default icon for cargo 'concr_cent'.
-00:00:00.775 : <WARNING> Missing default icon for cargo 'concr_stair'.
-00:00:00.776 : <WARNING> Missing default icon for cargo 'cont_trees'.
-00:00:00.776 : <WARNING> Missing default icon for cargo 'contamin'.
-00:00:00.776 : <WARNING> Missing default icon for cargo 'copp_rf_gutt'.
-00:00:00.776 : <WARNING> Missing default icon for cargo 'corks'.
-00:00:00.776 : <WARNING> Missing default icon for cargo 'cott_cheese'.
-00:00:00.777 : <WARNING> Missing default icon for cargo 'cott_harvest'.
-00:00:00.777 : <WARNING> Missing default icon for cargo 'crawler'.
-00:00:00.777 : <WARNING> Missing default icon for cargo 'cut_flowers'.
-00:00:00.777 : <WARNING> Missing default icon for cargo 'cyanide'.
-00:00:00.778 : <WARNING> Missing default icon for cargo 'czl_es300'.
-00:00:00.778 : <WARNING> Missing default icon for cargo 'czl_muv75'.
-00:00:00.778 : <WARNING> Missing default icon for cargo 'desinfection'.
-00:00:00.778 : <WARNING> Missing default icon for cargo 'diesel'.
-00:00:00.779 : <WARNING> Missing default icon for cargo 'diesel_gen'.
-00:00:00.779 : <WARNING> Missing default icon for cargo 'digger1000'.
-00:00:00.779 : <WARNING> Missing default icon for cargo 'digger500'.
-00:00:00.779 : <WARNING> Missing default icon for cargo 'dryers'.
-00:00:00.780 : <WARNING> Missing default icon for cargo 'drymilk'.
-00:00:00.780 : <WARNING> Missing default icon for cargo 'dynamite'.
-00:00:00.780 : <WARNING> Missing default icon for cargo 'elect_wiring'.
-00:00:00.780 : <WARNING> Missing default icon for cargo 'electronics'.
-00:00:00.780 : <WARNING> Missing default icon for cargo 'emp_wine_bar'.
-00:00:00.781 : <WARNING> Missing default icon for cargo 'emp_wine_bot'.
-00:00:00.781 : <WARNING> Missing default icon for cargo 'empty_barr'.
-00:00:00.781 : <WARNING> Missing default icon for cargo 'empty_palet'.
-00:00:00.781 : <WARNING> Missing default icon for cargo 'empty_spool'.
-00:00:00.781 : <WARNING> Missing default icon for cargo 'emptytank'.
-00:00:00.782 : <WARNING> Missing default icon for cargo 'ethane'.
-00:00:00.782 : <WARNING> Missing default icon for cargo 'excav_soil'.
-00:00:00.782 : <WARNING> Missing default icon for cargo 'excavator'.
-00:00:00.782 : <WARNING> Missing default icon for cargo 'exhausts_c'.
-00:00:00.783 : <WARNING> Missing default icon for cargo 'explosives'.
-00:00:00.783 : <WARNING> Missing default icon for cargo 'fertilizer'.
-00:00:00.783 : <WARNING> Missing default icon for cargo 'fireworks'.
-00:00:00.783 : <WARNING> Missing default icon for cargo 'fish_chips'.
-00:00:00.783 : <WARNING> Missing default icon for cargo 'floorpanels'.
-00:00:00.784 : <WARNING> Missing default icon for cargo 'flour'.
-00:00:00.784 : <WARNING> Missing default icon for cargo 'fluorine'.
-00:00:00.784 : <WARNING> Missing default icon for cargo 'food_oil_t'.
-00:00:00.784 : <WARNING> Missing default icon for cargo 'forklifts'.
-00:00:00.785 : <WARNING> Missing default icon for cargo 'fresh_fish'.
-00:00:00.785 : <WARNING> Missing default icon for cargo 'froz_octopi'.
-00:00:00.785 : <WARNING> Missing default icon for cargo 'frozen_hake'.
-00:00:00.785 : <WARNING> Missing default icon for cargo 'frsh_herbs'.
-00:00:00.786 : <WARNING> Missing default icon for cargo 'fuel_oil'.
-00:00:00.786 : <WARNING> Missing default icon for cargo 'fuel_tanks'.
-00:00:00.786 : <WARNING> Missing default icon for cargo 'fueltanker'.
-00:00:00.786 : <WARNING> Missing default icon for cargo 'furniture'.
-00:00:00.787 : <WARNING> Missing default icon for cargo 'garlic'.
-00:00:00.787 : <WARNING> Missing default icon for cargo 'glass'.
-00:00:00.787 : <WARNING> Missing default icon for cargo 'glass_packed'.
-00:00:00.787 : <WARNING> Missing default icon for cargo 'gnocchi'.
-00:00:00.788 : <WARNING> Missing default icon for cargo 'goat_cheese'.
-00:00:00.788 : <WARNING> Missing default icon for cargo 'granite_cube'.
-00:00:00.788 : <WARNING> Missing default icon for cargo 'grapes'.
-00:00:00.788 : <WARNING> Missing default icon for cargo 'graph_grease'.
-00:00:00.789 : <WARNING> Missing default icon for cargo 'grass_rolls'.
-00:00:00.789 : <WARNING> Missing default icon for cargo 'gravel'.
-00:00:00.789 : <WARNING> Missing default icon for cargo 'guard_rails'.
-00:00:00.789 : <WARNING> Missing default icon for cargo 'gummy_bears'.
-00:00:00.790 : <WARNING> Missing default icon for cargo 'harvest_bins'.
-00:00:00.790 : <WARNING> Missing default icon for cargo 'hchemicals'.
-00:00:00.790 : <WARNING> Missing default icon for cargo 'hi_volt_cabl'.
-00:00:00.790 : <WARNING> Missing default icon for cargo 'hipresstank'.
-00:00:00.791 : <WARNING> Missing default icon for cargo 'hmetal'.
-00:00:00.791 : <WARNING> Missing default icon for cargo 'honey'.
-00:00:00.791 : <WARNING> Missing default icon for cargo 'horse_tr'.
-00:00:00.791 : <WARNING> Missing default icon for cargo 'hvac'.
-00:00:00.792 : <WARNING> Missing default icon for cargo 'hwaste'.
-00:00:00.792 : <WARNING> Missing default icon for cargo 'hydrochlor'.
-00:00:00.792 : <WARNING> Missing default icon for cargo 'hydrogen'.
-00:00:00.793 : <WARNING> Missing default icon for cargo 'ibc_cont'.
-00:00:00.793 : <WARNING> Missing default icon for cargo 'icecream'.
-00:00:00.793 : <WARNING> Missing default icon for cargo 'iced_coffee'.
-00:00:00.793 : <WARNING> Missing default icon for cargo 'iron_pipes'.
-00:00:00.794 : <WARNING> Missing default icon for cargo 'kerosene'.
-00:00:00.794 : <WARNING> Missing default icon for cargo 'ketchup'.
-00:00:00.794 : <WARNING> Missing default icon for cargo 'lamb_stom'.
-00:00:00.794 : <WARNING> Missing default icon for cargo 'large_cont'.
-00:00:00.795 : <WARNING> Missing default icon for cargo 'largetubes'.
-00:00:00.795 : <WARNING> Missing default icon for cargo 'lavender'.
-00:00:00.795 : <WARNING> Missing default icon for cargo 'lead'.
-00:00:00.796 : <WARNING> Missing default icon for cargo 'limonades'.
-00:00:00.796 : <WARNING> Missing default icon for cargo 'live_cattle'.
-00:00:00.796 : <WARNING> Missing default icon for cargo 'live_pigs'.
-00:00:00.796 : <WARNING> Missing default icon for cargo 'liver_paste'.
-00:00:00.797 : <WARNING> Missing default icon for cargo 'logs'.
-00:00:00.797 : <WARNING> Missing default icon for cargo 'lpg'.
-00:00:00.797 : <WARNING> Missing default icon for cargo 'lpg_t'.
-00:00:00.798 : <WARNING> Missing default icon for cargo 'lumber'.
-00:00:00.798 : <WARNING> Missing default icon for cargo 'lumber_p'.
-00:00:00.798 : <WARNING> Missing default icon for cargo 'lux_yacht'.
-00:00:00.799 : <WARNING> Missing default icon for cargo 'magnesium'.
-00:00:00.799 : <WARNING> Missing default icon for cargo 'maple_syrup'.
-00:00:00.799 : <WARNING> Missing default icon for cargo 'marb_blck'.
-00:00:00.800 : <WARNING> Missing default icon for cargo 'marb_blck2'.
-00:00:00.800 : <WARNING> Missing default icon for cargo 'marb_slab'.
-00:00:00.800 : <WARNING> Missing default icon for cargo 'mason_jars'.
-00:00:00.800 : <WARNING> Missing default icon for cargo 'mat_handler'.
-00:00:00.801 : <WARNING> Missing default icon for cargo 'med_equip'.
-00:00:00.801 : <WARNING> Missing default icon for cargo 'med_vaccine'.
-00:00:00.801 : <WARNING> Missing default icon for cargo 'mercuric'.
-00:00:00.802 : <WARNING> Missing default icon for cargo 'metal_beams'.
-00:00:00.802 : <WARNING> Missing default icon for cargo 'metal_cans'.
-00:00:00.802 : <WARNING> Missing default icon for cargo 'metal_pipes'.
-00:00:00.802 : <WARNING> Missing default icon for cargo 'milk'.
-00:00:00.803 : <WARNING> Missing default icon for cargo 'milk_t'.
-00:00:00.803 : <WARNING> Missing default icon for cargo 'mondeos'.
-00:00:00.803 : <WARNING> Missing default icon for cargo 'moto_tires'.
-00:00:00.803 : <WARNING> Missing default icon for cargo 'motor_oil'.
-00:00:00.804 : <WARNING> Missing default icon for cargo 'motor_oil_c'.
-00:00:00.804 : <WARNING> Missing default icon for cargo 'motorcycles'.
-00:00:00.805 : <WARNING> Missing default icon for cargo 'mozzarela'.
-00:00:00.805 : <WARNING> Missing default icon for cargo 'mtl_coil'.
-00:00:00.805 : <WARNING> Missing default icon for cargo 'natur_rubber'.
-00:00:00.805 : <WARNING> Missing default icon for cargo 'neon'.
-00:00:00.806 : <WARNING> Missing default icon for cargo 'nitrocel'.
-00:00:00.806 : <WARNING> Missing default icon for cargo 'nitrogen'.
-00:00:00.806 : <WARNING> Missing default icon for cargo 'nonalco_beer'.
-00:00:00.807 : <WARNING> Missing default icon for cargo 'nuts'.
-00:00:00.807 : <WARNING> Missing default icon for cargo 'nylon_cord'.
-00:00:00.807 : <WARNING> Missing default icon for cargo 'oil'.
-00:00:00.807 : <WARNING> Missing default icon for cargo 'oil_filt_c'.
-00:00:00.808 : <WARNING> Missing default icon for cargo 'oil_filters'.
-00:00:00.808 : <WARNING> Missing default icon for cargo 'olive_oil'.
-00:00:00.808 : <WARNING> Missing default icon for cargo 'olive_oil_t'.
-00:00:00.809 : <WARNING> Missing default icon for cargo 'olive_tree'.
-00:00:00.809 : <WARNING> Missing default icon for cargo 'olives'.
-00:00:00.809 : <WARNING> Missing default icon for cargo 'onion'.
-00:00:00.809 : <WARNING> Missing default icon for cargo 'oranges'.
-00:00:00.810 : <WARNING> Missing default icon for cargo 'ore'.
-00:00:00.810 : <WARNING> Missing default icon for cargo 'outdr_flr_tl'.
-00:00:00.810 : <WARNING> Missing default icon for cargo 'overweight'.
-00:00:00.810 : <WARNING> Missing default icon for cargo 'packag_food'.
-00:00:00.811 : <WARNING> Missing default icon for cargo 'paper'.
-00:00:00.811 : <WARNING> Missing default icon for cargo 'pasta'.
-00:00:00.811 : <WARNING> Missing default icon for cargo 'pears'.
-00:00:00.812 : <WARNING> Missing default icon for cargo 'peas'.
-00:00:00.812 : <WARNING> Missing default icon for cargo 'perfor_frks'.
-00:00:00.812 : <WARNING> Missing default icon for cargo 'pesticide'.
-00:00:00.813 : <WARNING> Missing default icon for cargo 'pesto'.
-00:00:00.813 : <WARNING> Missing default icon for cargo 'pet_food'.
-00:00:00.813 : <WARNING> Missing default icon for cargo 'pet_food_c'.
-00:00:00.814 : <WARNING> Missing default icon for cargo 'petrol'.
-00:00:00.814 : <WARNING> Missing default icon for cargo 'phosphor'.
-00:00:00.814 : <WARNING> Missing default icon for cargo 'pickup_gr'.
-00:00:00.815 : <WARNING> Missing default icon for cargo 'plant_substr'.
-00:00:00.815 : <WARNING> Missing default icon for cargo 'plast_film'.
-00:00:00.815 : <WARNING> Missing default icon for cargo 'plast_film_c'.
-00:00:00.815 : <WARNING> Missing default icon for cargo 'plast_pipes'.
-00:00:00.816 : <WARNING> Missing default icon for cargo 'plastic_gra'.
-00:00:00.816 : <WARNING> Missing default icon for cargo 'plumb_suppl'.
-00:00:00.816 : <WARNING> Missing default icon for cargo 'plums'.
-00:00:00.816 : <WARNING> Missing default icon for cargo 'pnut_butter'.
-00:00:00.817 : <WARNING> Missing default icon for cargo 'polyst_box'.
-00:00:00.817 : <WARNING> Missing default icon for cargo 'pork_meat'.
-00:00:00.817 : <WARNING> Missing default icon for cargo 'post_packag'.
-00:00:00.818 : <WARNING> Missing default icon for cargo 'pot_flowers'.
-00:00:00.818 : <WARNING> Missing default icon for cargo 'potahydro'.
-00:00:00.818 : <WARNING> Missing default icon for cargo 'potassium'.
-00:00:00.818 : <WARNING> Missing default icon for cargo 'potatoes'.
-00:00:00.819 : <WARNING> Missing default icon for cargo 'precast_strs'.
-00:00:00.819 : <WARNING> Missing default icon for cargo 'press_sl_val'.
-00:00:00.819 : <WARNING> Missing default icon for cargo 'propane'.
-00:00:00.819 : <WARNING> Missing default icon for cargo 'prosciutto'.
-00:00:00.820 : <WARNING> Missing default icon for cargo 'protec_cloth'.
-00:00:00.820 : <WARNING> Missing default icon for cargo 'pumps'.
-00:00:00.820 : <WARNING> Missing default icon for cargo 'radiators'.
-00:00:00.821 : <WARNING> Missing default icon for cargo 're_bars'.
-00:00:00.821 : <WARNING> Missing default icon for cargo 'refl_posts'.
-00:00:00.821 : <WARNING> Missing default icon for cargo 'rice'.
-00:00:00.821 : <WARNING> Missing default icon for cargo 'rice_c'.
-00:00:00.822 : <WARNING> Missing default icon for cargo 'roof_tiles'.
-00:00:00.822 : <WARNING> Missing default icon for cargo 'roofing_felt'.
-00:00:00.822 : <WARNING> Missing default icon for cargo 'rooflights'.
-00:00:00.822 : <WARNING> Missing default icon for cargo 'rye'.
-00:00:00.823 : <WARNING> Missing default icon for cargo 'salm_fillet'.
-00:00:00.823 : <WARNING> Missing default icon for cargo 'salt_spice_c'.
-00:00:00.823 : <WARNING> Missing default icon for cargo 'salt_spices'.
-00:00:00.823 : <WARNING> Missing default icon for cargo 'sand'.
-00:00:00.824 : <WARNING> Missing default icon for cargo 'sandwch_pnls'.
-00:00:00.824 : <WARNING> Missing default icon for cargo 'sausages'.
-00:00:00.824 : <WARNING> Missing default icon for cargo 'sawpanels'.
-00:00:00.825 : <WARNING> Missing default icon for cargo 'scaffoldings'.
-00:00:00.825 : <WARNING> Missing default icon for cargo 'scania_tr'.
-00:00:00.825 : <WARNING> Missing default icon for cargo 'scooters'.
-00:00:00.826 : <WARNING> Missing default icon for cargo 'scrap_metals'.
-00:00:00.826 : <WARNING> Missing default icon for cargo 'seal_bearing'.
-00:00:00.826 : <WARNING> Missing default icon for cargo 'sheep_wool'.
-00:00:00.826 : <WARNING> Missing default icon for cargo 'shock_absorb'.
-00:00:00.827 : <WARNING> Missing default icon for cargo 'silica'.
-00:00:00.827 : <WARNING> Missing default icon for cargo 'smokd_eel'.
-00:00:00.827 : <WARNING> Missing default icon for cargo 'smokd_sprats'.
-00:00:00.828 : <WARNING> Missing default icon for cargo 'sodchlor'.
-00:00:00.828 : <WARNING> Missing default icon for cargo 'sodhydro'.
-00:00:00.828 : <WARNING> Missing default icon for cargo 'sodium'.
-00:00:00.828 : <WARNING> Missing default icon for cargo 'soy_milk'.
-00:00:00.829 : <WARNING> Missing default icon for cargo 'soy_milk_t'.
-00:00:00.829 : <WARNING> Missing default icon for cargo 'spher_valves'.
-00:00:00.829 : <WARNING> Missing default icon for cargo 'sq_tub'.
-00:00:00.830 : <WARNING> Missing default icon for cargo 'steel_cord'.
-00:00:00.830 : <WARNING> Missing default icon for cargo 'stone_dust'.
-00:00:00.830 : <WARNING> Missing default icon for cargo 'stone_wool'.
-00:00:00.830 : <WARNING> Missing default icon for cargo 'stones'.
-00:00:00.831 : <WARNING> Missing default icon for cargo 'straw_bales'.
-00:00:00.831 : <WARNING> Missing default icon for cargo 'sugar'.
-00:00:00.831 : <WARNING> Missing default icon for cargo 'sulfuric'.
-00:00:00.831 : <WARNING> Missing default icon for cargo 'sulfuric_t'.
-00:00:00.832 : <WARNING> Missing default icon for cargo 'tableware'.
-00:00:00.832 : <WARNING> Missing default icon for cargo 'ter_forklift'.
-00:00:00.832 : <WARNING> Missing default icon for cargo 'tomatoes'.
-00:00:00.832 : <WARNING> Missing default icon for cargo 'toys'.
-00:00:00.833 : <WARNING> Missing default icon for cargo 'tractors'.
-00:00:00.833 : <WARNING> Missing default icon for cargo 'train_part'.
-00:00:00.833 : <WARNING> Missing default icon for cargo 'train_part2'.
-00:00:00.834 : <WARNING> Missing default icon for cargo 'transmis'.
-00:00:00.834 : <WARNING> Missing default icon for cargo 'truck_batt'.
-00:00:00.834 : <WARNING> Missing default icon for cargo 'truck_batt_c'.
-00:00:00.834 : <WARNING> Missing default icon for cargo 'truck_rims'.
-00:00:00.835 : <WARNING> Missing default icon for cargo 'truck_rims_c'.
-00:00:00.835 : <WARNING> Missing default icon for cargo 'truck_tyres'.
-00:00:00.835 : <WARNING> Missing default icon for cargo 'tyres'.
-00:00:00.835 : <WARNING> Missing default icon for cargo 'used_battery'.
-00:00:00.836 : <WARNING> Missing default icon for cargo 'used_packag'.
-00:00:00.836 : <WARNING> Missing default icon for cargo 'used_plast'.
-00:00:00.836 : <WARNING> Missing default icon for cargo 'used_plast_c'.
-00:00:00.836 : <WARNING> Missing default icon for cargo 'vans_fd'.
-00:00:00.837 : <WARNING> Missing default icon for cargo 'vans_id'.
-00:00:00.837 : <WARNING> Missing default icon for cargo 'vans_vt'.
-00:00:00.837 : <WARNING> Missing default icon for cargo 'vent_tube'.
-00:00:00.837 : <WARNING> Missing default icon for cargo 'vinegar'.
-00:00:00.838 : <WARNING> Missing default icon for cargo 'vinegar_c'.
-00:00:00.838 : <WARNING> Missing default icon for cargo 'volvo_cars'.
-00:00:00.838 : <WARNING> Missing default icon for cargo 'volvo_tr'.
-00:00:00.839 : <WARNING> Missing default icon for cargo 'wallpanels'.
-00:00:00.839 : <WARNING> Missing default icon for cargo 'watermelons'.
-00:00:00.839 : <WARNING> Missing default icon for cargo 'watertank'.
-00:00:00.839 : <WARNING> Missing default icon for cargo 'wheat'.
-00:00:00.840 : <WARNING> Missing default icon for cargo 'windml_eng'.
-00:00:00.840 : <WARNING> Missing default icon for cargo 'windml_tube'.
-00:00:00.840 : <WARNING> Missing default icon for cargo 'wood_bark'.
-00:00:00.840 : <WARNING> Missing default icon for cargo 'wooden_beams'.
-00:00:00.841 : <WARNING> Missing default icon for cargo 'wrk_cloth'.
-00:00:00.841 : <WARNING> Missing default icon for cargo 'wshavings'.
-00:00:00.841 : <WARNING> Missing default icon for cargo 'yogurt'.
-00:00:00.841 : <WARNING> Missing default icon for cargo 'young_seed'.
-00:00:00.899 : Collecting Vehicle definitions...
-00:00:00.906 : Loaded traffic trailers of type 'truck_semi': 24
-00:00:00.907 : Loaded traffic trailers of type 'truck_long': 0
-00:00:00.908 : Loaded traffic trailers of type 'train_cargo': 13
-00:00:00.910 : Loaded traffic trailers of type 'car': 7
-00:00:00.910 : Loaded traffic trailers of type 'bus': 0
-00:00:00.913 : Loaded traffic trailers of type 'truck': 33
-00:00:00.918 : Loaded traffic trailers of type 'tram': 76
-00:00:00.923 : Loaded traffic trailers of type 'train': 87
-00:00:00.923 : Loaded traffic trailers of type 'special': 0
-00:00:00.929 : Loaded traffic vehicles of type 'car': 100
-00:00:00.932 : Loaded traffic vehicles of type 'car_custom': 55
-00:00:00.935 : Loaded traffic vehicles of type 'truck': 57
-00:00:00.937 : Loaded traffic vehicles of type 'truck_light': 29
-00:00:00.940 : Loaded traffic vehicles of type 'truck_medium': 14
-00:00:00.940 : Loaded traffic vehicles of type 'truck_heavy': 5
-00:00:00.941 : Loaded traffic vehicles of type 'truck_long': 0
-00:00:00.942 : Loaded traffic vehicles of type 'truck_custom': 17
-00:00:00.944 : Loaded traffic vehicles of type 'bus': 27
-00:00:00.945 : Loaded traffic vehicles of type 'bus_custom': 4
-00:00:00.947 : Loaded traffic vehicles of type 'tram': 49
-00:00:00.948 : Loaded traffic vehicles of type 'train': 11
-00:00:00.949 : Loaded traffic vehicles of type 'train_wire': 39
-00:00:00.950 : Loaded traffic vehicles of type 'train_custom': 4
-00:00:00.954 : Loaded traffic vehicles of type 'police': 65
-00:00:00.956 : Loaded traffic vehicles of type 'fire': 35
-00:00:00.958 : Loaded traffic vehicles of type 'medical': 32
-00:00:00.958 : Loaded traffic vehicles of type 'escort_front': 1
-00:00:00.959 : Loaded traffic vehicles of type 'escort_back': 1
-00:00:00.960 : Loaded traffic vehicles of type 'special': 7
-00:00:00.961 : Loaded addon hookups: 107
-00:00:00.961 : Linking cities with countries...
-00:00:00.961 : Collecting prefab descriptors...
-00:00:00.961 : Loading prefab descriptors...
-00:00:00.962 : Loading ferry connections...
-00:00:00.962 : Loading cargo trailer assignment...
-00:00:00.969 : Loading company cargo assignment...
-00:00:01.017 : [physx] @0: Starting server.
-00:00:01.017 : [physx] @0: Creating reporter.
-00:00:01.018 : [physx] @0: Created foundation version 1.0.0.
-00:00:01.018 : [physx] @0: Created physics version 3.4.3.
-00:00:01.018 : [physx] @0: Initialized extensions.
-00:00:01.019 : [physx] @0: Created CPU dispatcher with 2 threads and logical CPU affinities:
-00:00:01.020 : [physx] @0: CPU          0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
-00:00:01.020 : [physx] @0: thread   0   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
-00:00:01.020 : [physx] @0: thread   1   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
-00:00:01.021 : [physx] @0: Created convex cooking.
-00:00:01.021 : [physx] @0: Created fast triangle cooking.
-00:00:01.022 : [physx] @0: Created optimal triangle cooking.
-00:00:01.022 : [physx] @0: Creating simulation filter.
-00:00:01.023 : [bullet] Starting server
-00:00:01.024 : [physx] @0: Creating debug draw.
-00:00:01.032 : [MP] =========================================================================
-00:00:01.032 : [MP] Session automated start
-00:00:01.033 : [MP] -------------------------------------------------------------------------
-00:00:01.033 : [MP] DLC - eu_balkane
-00:00:01.033 : [MP] DLC - eu_balkanw
-00:00:01.033 : [MP] DLC - eu_balt
-00:00:01.034 : [MP] DLC - eu_east
-00:00:01.034 : [MP] DLC - eu_fr
-00:00:01.034 : [MP] DLC - eu_greece
-00:00:01.035 : [MP] DLC - eu_iberia
-00:00:01.035 : [MP] DLC - eu_it
-00:00:01.036 : [MP] DLC - eu_north
-00:00:01.037 : [MP] DLC - eu_nordic
-00:00:01.038 : [MP] MOD - Peru Roads
-00:00:01.038 : [MP] MOD - buses_MP
-00:00:01.038 : [MP] MOD - ACTIVADOR
-00:00:01.039 : [MP] -------------------------------------------------------------------------
-00:00:01.039 : [MP] Server init
-00:00:01.622 : [MP] LogOn to persistent server account.
-00:00:02.898 : [SERVICES] Steam connected
-00:00:02.898 : [MP] Steam connected
-00:00:02.899 : [MP] Settings init
-00:00:02.899 : [MP] Init steam game server params
-00:00:02.900 : <WARNING> [MP] Warning: Proper player limit exceeded.
-00:00:02.905 : [MP] Initiate server-client.
-00:00:02.906 : [MP] Session started.
-00:00:02.907 : [MP] Server created.
-00:00:02.907 : [MP] =========================================================================
-00:00:02.907 : [MP] 
-00:00:02.907 : [MP] Session search id: 85568392936136396/101
-00:00:02.907 : [MP] Session name: AndesMP Server
-00:00:02.908 : [MP] Session description: AndesMP Server
-00:00:02.908 : [MP] Maximum number of players: 128
-00:00:02.908 : [MP] Connection virtual ports: 100 / 101
-00:00:02.908 : [MP] Connection server ports: 27015 / 27016
-00:00:02.908 : [MP] Friends only: False
-00:00:02.909 : [MP] 
-00:00:02.909 : [MP] Damage from players: True
-00:00:02.909 : [MP] Traffic enabled: True
-00:00:02.909 : [MP] Hide player in company: False
-00:00:02.909 : [MP] Hide colliding players: True
-00:00:02.909 : [MP] Force speed limiter: False
-00:00:02.910 : [MP] Show name tags: True
-00:00:02.910 : [MP] Disable collisions in service: False
-00:00:02.910 : [MP] Timezones: False
-00:00:02.910 : [MP] Mods optioning: False
-00:00:02.910 : [MP] 
-00:00:02.911 : [MP] Game version: 1.58s
-00:00:02.911 : [MP] Map name: /map/peru.mbd
-00:00:02.911 : [MP] Password required: No
-00:00:02.911 : [MP] Modded session: Yes
-00:00:02.911 : [MP] 
-00:00:02.912 : [MP] =========================================================================
-00:00:02.912 : [MP] Session running.
-00:02:25.224 : [MP] [Chat] Bienvenido a AndesMP!
-00:02:25.228 : [MP] State: running;  Time: 2910;  Players: 0
-00:03:02.913 : [MP] State: running;  Time: 182910;  Players: 0
-00:06:02.915 : [MP] State: running;  Time: 362913;  Players: 0
-00:09:02.916 : [MP] State: running;  Time: 542914;  Players: 0
-00:12:02.919 : [MP] State: running;  Time: 722917;  Players: 0
-00:15:02.921 : [MP] State: running;  Time: 902919;  Players: 0
-00:16:57.676 : [MP] [Chat] josue connected
-00:16:57.677 : [MP] josue connected, client_id = 10 
-00:18:02.924 : [MP] State: running;  Time: 1082922;  Players: 1
-00:21:02.926 : [MP] State: running;  Time: 1262924;  Players: 1
-00:24:02.927 : [MP] State: running;  Time: 1442925;  Players: 1
-00:26:48.114 : [MP] [Chat] josue disconnected
-00:26:48.115 : [MP] josue disconnected, client_id = 10 
-00:27:02.927 : [MP] State: running;  Time: 1622925;  Players: 0
-00:30:02.931 : [MP] State: running;  Time: 1802929;  Players: 0
-00:33:02.935 : [MP] State: running;  Time: 1982932;  Players: 0
-00:36:02.939 : [MP] State: running;  Time: 2162937;  Players: 0
-00:39:02.944 : [MP] State: running;  Time: 2342941;  Players: 0
-00:42:02.944 : [MP] State: running;  Time: 2522942;  Players: 0
-00:45:02.948 : [MP] State: running;  Time: 2702946;  Players: 0
-00:45:43.836 : quit
-00:45:43.837 : [MP] Session killed.
-00:45:43.837 : [MP] Session closing.
-00:45:43.839 : [MP] Connection closed - reason: 9
-00:45:44.200 : [MP] Session closed.
-00:45:44.208 : <ERROR> [fs] Failed to open file '/home/config_ds.cfg' in the create_truncate mode.
-00:45:44.210 : <WARNING> [cvar] Can not create file '</home/steam/.local/share/Euro Truck Simulator 2 | /home>/config_ds.cfg'.
-00:45:44.315 : [physx] @164547: Destroying debug draw.
-00:45:44.319 : [physx] @0: Stopping server.
-00:45:44.320 : [physx] @0: Destroying simulation filter.
-00:45:44.320 : [physx] @0: Destroying optimal triangle cooking.
-00:45:44.320 : [physx] @0: Destroying fast triangle cooking.
-00:45:44.321 : [physx] @0: Destroying convex cooking.
-00:45:44.321 : [physx] @0: Destroying CPU dispatcher.
-00:45:44.329 : [physx] @0: Deinitializing extensions.
-00:45:44.329 : [physx] @0: Destroying physics.
-00:45:44.329 : [physx] @0: Destroying foundation.
-00:45:44.329 : [physx] @0: Destroying reporter.
-00:45:44.330 : [bullet] Stopping server
-00:45:44.381 : [hashfs] base_cfg.scs: Unmounted.
-00:45:44.381 : [hashfs] locale.scs: Unmounted.
-00:45:44.382 : [hashfs] core.scs: Unmounted.
-00:45:44.382 : [hashfs] def.scs: Unmounted.
-00:45:44.383 : [hashfs] base_share.scs: Unmounted.
-00:45:44.384 : [hashfs] base_vehicle.scs: Unmounted.
-00:45:44.384 : [hashfs] base_map.scs: Unmounted.
-00:45:44.384 : [hashfs] base.scs: Unmounted.
-00:45:44.385 : [hashfs] effect.scs: Unmounted.
-00:45:44.397 : [sys] Process manager shutdown.
+00:00:00.001 : [cpu] GenuineIntel [12th Gen Intel(R) Core(TM) i5-12450H] - 1 package, 6 cores, 12 threads.
+00:00:00.002 : [cpu] logical_id  : 0    1    2    3    4    5    6    7    8    9    10   11  
+00:00:00.003 : [cpu] package_id  : 0    0    0    0    0    0    0    0    0    0    0    0   
+00:00:00.005 : [cpu] core_id     : 0    0    1    1    2    2    3    3    4    4    5    5   
+00:00:00.006 : [cpu] thread_id   : 0    1    0    1    0    1    0    1    0    1    0    1   
+00:00:00.007 : [cpu] core_type   : P    P    P    P    P    P    P    P    P    P    P    P   
+00:00:00.008 : [cpu] freq(MHz)   : 2495 2495 2495 2495 2495 2495 2495 2495 2495 2495 2495 2495
+00:00:00.009 : [sys] using 4 worker thread(s)
+00:00:00.010 : [sys] and 3 worker threads for IO.
+00:00:00.011 : [sys] plus 3 real-time worker threads.
+00:00:00.011 : [sys] using CGT CLOCK_MONOTONIC_RAW timer with 1nsec resolution.
+00:00:00.012 : [mem] physical total: 7793M
+00:00:00.013 : [mem] physical avail: 4890M
+00:00:00.013 : [mem] virtual total: 17592186044415M
+00:00:00.014 : [mem] virtual avail: 17592186044415M
+00:00:00.015 : [mem] Trying to allocate memory pool (2097152K)
+00:00:00.015 : [mem] Allocated 128 MBs for temporary loading buffers
+00:00:00.034 : [hashfs] version.scs: Created and validated, 2 entries (7E39407F2570A52C5F9EF5BBF7E1450DE5A9068726AF61633EA6685BCC3F2C48)
+00:00:00.035 : [hashfs] version.scs: Unmounted.
+00:00:00.036 : [ufs] Loaded pack set version 1.60.1.0 created at 1781618054
+00:00:00.046 : [hashfs] effect.scs: Created and validated, 24481 entries (32A4AEF39EE1F5670575495AF4BECAAC723F5EE99C39581206CED63C167E9D0D)
+00:00:00.047 : [fs] device /app/effect.scs mounted to core pool.
+00:00:00.049 : [hashfs] base.scs: Created and validated, 2077 entries (DE8C7C951DEAA259C2A948260DC32DC86EC5988C2C88C946B4C6BD584418AC5D)
+00:00:00.049 : [fs] device /app/base.scs mounted to scs pool.
+00:00:00.051 : [hashfs] base_map.scs: Created and validated, 1412 entries (5705D69F55EB1C51E7610DE81D63499A573E5BB8EEF19636AB9AEF055AEF936E)
+00:00:00.052 : [fs] device /app/base_map.scs mounted to scs pool.
+00:00:00.054 : [hashfs] base_vehicle.scs: Created and validated, 1932 entries (DD9210C9DB4ED816ECAB1CFFFA20D4183CDE41D63EC60D7AA97A7FAA85BC93B8)
+00:00:00.056 : [fs] device /app/base_vehicle.scs mounted to scs pool.
+00:00:00.058 : [hashfs] base_share.scs: Created and validated, 1748 entries (CAABCC01C81C9758FB6711B31F4149C54C7C0226574EB21E3551352CDFD71A40)
+00:00:00.058 : [fs] device /app/base_share.scs mounted to scs pool.
+00:00:00.160 : [hashfs] def.scs: Created and validated, 66940 entries (45467A1E00B53BF93E3B6441BA5BB990358B1F0F308915AB19D1AFD27401E42B)
+00:00:00.160 : [fs] device /app/def.scs mounted to scs pool.
+00:00:00.161 : [hashfs] core.scs: Created and validated, 9 entries (57ED758DBEA275389556494F64750480D52004343E2B877EBA1433E7D30B3800)
+00:00:00.162 : [fs] device /app/core.scs mounted to core pool.
+00:00:00.179 : [hashfs] locale.scs: Created and validated, 522 entries (B0105B7503FA5D8A95EE2C76E78D3FF4C15614E2C0865C2EC990EE326BC0E10D)
+00:00:00.179 : [fs] device /app/locale.scs mounted to core pool.
+00:00:00.180 : [hashfs] base_cfg.scs: Created and validated, 1 entries (99D0C5EC86E5104B1C645A28C45E4B11C01B133133BB90F8E130C3643B3F5337)
+00:00:00.181 : [fs] device /app/base_cfg.scs mounted to core pool.
+00:00:00.185 : [ufs] core pool: 4 packs, 24858 files, 155 dirs
+00:00:00.196 : [ufs] scs pool: 5 packs, 71406 files, 2703 dirs
+00:00:00.197 : [ufs] Home directory: '/home/steam/.local/share/Euro Truck Simulator 2'.
+00:00:00.198 : [fs] device /home/steam/.local/share/Euro Truck Simulator 2 mounted to user pool.
+00:00:00.404 : exec /home/config_ds.cfg
+00:00:00.406 : [sys] Executing /home/config_ds.cfg ...
+00:00:00.409 : uset r_hdr_display_gray_offset "0.0"
+00:00:00.410 : uset r_hdr_display_white "-1.0"
+00:00:00.411 : uset r_hdr_display_black "-1.0"
+00:00:00.411 : uset r_sdr_display_gray_offset "0.0"
+00:00:00.411 : uset r_sdr_display_white "-1.0"
+00:00:00.412 : uset r_sdr_display_black "-1.0"
+00:00:00.412 : uset r_far_shadow_disable "0"
+00:00:00.413 : uset r_show_sun_cascades "0"
+00:00:00.413 : uset r_tonemap_debug "0"
+00:00:00.414 : uset r_taa_modulated_drr_strength "0.0"
+00:00:00.414 : uset r_drr_strength "8.0"
+00:00:00.414 : uset r_use_depth_bounds "1"
+00:00:00.415 : uset r_hide_helpers "0"
+00:00:00.415 : uset s_sound_debug "0"
+00:00:00.416 : uset s_init_intro_music_mute "0"
+00:00:00.416 : uset s_init_intro_music_volume "0.5"
+00:00:00.416 : uset s_init_ui_music_mute "0"
+00:00:00.417 : uset s_init_ui_music_volume "0.5"
+00:00:00.417 : uset s_init_master_mute "0"
+00:00:00.418 : uset s_init_master_volume "0.75"
+00:00:00.418 : uset s_output_driver ""
+00:00:00.419 : uset s_live_update "0"
+00:00:00.419 : uset s_suspend_sound "1"
+00:00:00.419 : uset g_mm_help_shown "0"
+00:00:00.420 : uset g_frame_image_fmt "jpg"
+00:00:00.422 : uset g_frames_path ""
+00:00:00.422 : uset g_convoy_allow_load "0"
+00:00:00.423 : uset g_max_convoy_size "128"
+00:00:00.423 : uset g_last_hidden_dlc_widget_name ""
+00:00:00.424 : uset g_last_seen_dlc_release_date "0"
+00:00:00.424 : uset g_last_seen_patch_notes_hash "0"
+00:00:00.425 : uset g_academy_book_count "0"
+00:00:00.425 : uset g_anti_slip "1"
+00:00:00.426 : uset g_abs "1"
+00:00:00.426 : uset g_bumps "1.0"
+00:00:00.427 : uset g_editor_zoom_speed "1.0"
+00:00:00.427 : uset g_map_note_user_id "0"
+00:00:00.428 : uset g_color_feedback "1"
+00:00:00.428 : uset g_disable_hud_activation "0"
+00:00:00.428 : uset r_interior_raindrops "0"
+00:00:00.429 : uset g_interior_camera_zero_pitch "0"
+00:00:00.429 : uset r_multimon_exterior_in_aux "0"
+00:00:00.430 : uset r_multimon_interior_in_main "1"
+00:00:00.430 : uset r_multimon_rotation_aux "0"
+00:00:00.431 : uset r_multimon_rotation_right "0"
+00:00:00.431 : uset r_multimon_rotation_left "0"
+00:00:00.431 : uset r_multimon_rotation_center "0"
+00:00:00.432 : uset r_multimon_vert_offset_right "0"
+00:00:00.432 : uset r_multimon_vert_offset_left "0"
+00:00:00.433 : uset r_multimon_border_fov_right "0"
+00:00:00.433 : uset r_multimon_border_fov_left "0"
+00:00:00.434 : uset r_multimon_fov_vertical "0"
+00:00:00.434 : uset r_multimon_fov_horizontal "50"
+00:00:00.435 : uset r_multimon_mode "0"
+00:00:00.435 : uset r_buffer_page_size "10"
+00:00:00.436 : uset r_deferred_debug "0"
+00:00:00.436 : uset r_mirror_scale_y "1.0"
+00:00:00.438 : uset r_mirror_scale_x "1.0"
+00:00:00.439 : uset r_scale_y "1.0"
+00:00:00.440 : uset r_scale_x "1.0"
+00:00:00.440 : uset r_normal_maps "1"
+00:00:00.441 : uset r_sunshafts "1"
+00:00:00.441 : uset r_color_saturation "1.0"
+00:00:00.442 : uset r_color_yellow_blue "0.0"
+00:00:00.443 : uset r_color_magenta_green "0.0"
+00:00:00.443 : uset r_color_cyan_red "0.0"
+00:00:00.444 : uset r_color_correction "1"
+00:00:00.444 : uset r_light_flares "1"
+00:00:00.445 : uset r_cloud_shadows "1"
+00:00:00.445 : uset r_dof_filter_size "0.5"
+00:00:00.445 : uset r_dof_transition "400.0"
+00:00:00.446 : uset r_dof_start "200.0"
+00:00:00.446 : uset r_dof "1"
+00:00:00.447 : uset r_ssao "2"
+00:00:00.447 : uset r_taa_luma_sharpen "1.0"
+00:00:00.448 : uset r_taa_tuning "0"
+00:00:00.448 : uset r_aa "6"
+00:00:00.449 : uset r_interior_shadow "1"
+00:00:00.449 : uset r_fake_shadows "2"
+00:00:00.450 : uset r_sun_shadow_texture_size "4096"
+00:00:00.450 : uset r_sun_shadow_quality "3"
+00:00:00.450 : uset r_mirror_group "3"
+00:00:00.451 : uset r_mirror_view_distance "80.0"
+00:00:00.452 : uset r_deferred_mirrors "1"
+00:00:00.452 : uset r_nowmi "0"
+00:00:00.452 : uset r_startup_progress "0"
+00:00:00.453 : uset r_setup_done "0"
+00:00:00.454 : uset r_peak_brightness "1.0"
+00:00:00.454 : uset r_hmd_controller_shadows "0"
+00:00:00.455 : uset r_hmd_draw_controllers "0"
+00:00:00.456 : uset r_hmd_water_pixels_per_deg "20.0"
+00:00:00.456 : uset r_ipd_scale "1.0"
+00:00:00.457 : uset r_manual_stereo_mirror_mode "1"
+00:00:00.457 : uset r_manual_stereo_ui_lod_bias "-0.75"
+00:00:00.458 : uset r_manual_stereo_ui_mipmaps "1"
+00:00:00.458 : uset r_manual_stereo_ui_buffer_scale "2.0"
+00:00:00.458 : uset r_manual_stereo_buffer_scale "1.0"
+00:00:00.459 : uset r_manual_stereo_ui_pitch_game "-10.0"
+00:00:00.460 : uset r_manual_stereo_ui_yaw_game "-40.0"
+00:00:00.460 : uset r_manual_stereo_ui_pitch "-30.0"
+00:00:00.461 : uset r_manual_stereo_ui_yaw "0.0"
+00:00:00.461 : uset r_manual_stereo_ui_y_game "-0.2"
+00:00:00.461 : uset r_manual_stereo_ui_x_game "0.5"
+00:00:00.462 : uset r_manual_stereo_ui_y "-0.5"
+00:00:00.462 : uset r_manual_stereo_ui_x "0.0"
+00:00:00.463 : uset r_manual_stereo_ui_static_fov "40"
+00:00:00.463 : uset r_manual_stereo_ui_fov_game "100"
+00:00:00.464 : uset r_manual_stereo_ui_fov "65"
+00:00:00.464 : uset r_manual_stereo_ui_radius_game "0.0"
+00:00:00.465 : uset r_manual_stereo_ui_radius "3.0"
+00:00:00.465 : uset r_manual_stereo_ui_dist_game "0.5"
+00:00:00.466 : uset r_manual_stereo_ui_dist "1"
+00:00:00.466 : uset r_minimal_unfinished_frames "0"
+00:00:00.467 : uset r_no_frame_tracking "0"
+00:00:00.467 : uset r_mode_refresh "0"
+00:00:00.467 : uset r_mode_height "0"
+00:00:00.468 : uset r_mode_width "0"
+00:00:00.468 : uset r_path ""
+00:00:00.468 : uset r_device ""
+00:00:00.469 : uset i_cursor_semantic_force_spd_mlt "0.35"
+00:00:00.469 : uset i_cursor_force_spd_mlt "0.75"
+00:00:00.470 : uset i_controller_cursor_speed "800.0"
+00:00:00.470 : uset g_stream_exts ".ogg;.mp3"
+00:00:00.470 : uset g_album_image "0"
+00:00:00.471 : uset g_thrustmaster "1"
+00:00:00.471 : uset g_tobii "1"
+00:00:00.471 : uset g_trackir "1"
+00:00:00.472 : uset g_lod_factor_pedestrian "1.0"
+00:00:00.472 : uset g_pedestrian "1"
+00:00:00.473 : uset g_light_span_factor "1.0"
+00:00:00.473 : uset g_light_distance_factor "1.0"
+00:00:00.473 : uset g_vehicle_flare_lights "1"
+00:00:00.474 : uset g_auto_traffic_headlights "1"
+00:00:00.474 : uset g_lod_factor_parked "1.0"
+00:00:00.475 : uset g_lod_factor_traffic "1.0"
+00:00:00.475 : uset g_traffic "1.0"
+00:00:00.475 : uset g_kdop_preview "0"
+00:00:00.476 : uset g_screenshot_on_bug_quality "100"
+00:00:00.476 : uset g_screenshot_on_bug "0"
+00:00:00.476 : uset g_debug_map_limits "0"
+00:00:00.477 : uset g_city_name_move "0"
+00:00:00.477 : uset g_assert_dump "0"
+00:00:00.477 : uset g_developer "0"
+00:00:00.478 : uset g_semantical_pause_inactivity "120"
+00:00:00.478 : uset g_pause_on_disconnect "1"
+00:00:00.478 : uset g_semantical_ff_inactivity "300"
+00:00:00.479 : uset g_steam_rich_presence "1"
+00:00:00.479 : uset g_steam_browser "1"
+00:00:00.479 : uset g_steam_screenshots "2"
+00:00:00.480 : uset g_artist_id "0"
+00:00:00.480 : uset g_save_format "0"
+00:00:00.480 : uset g_trailer_cables_mode "2"
+00:00:00.481 : uset g_intelligent_transmission "0"
+00:00:00.481 : uset g_spec_trans_refill_tank "1"
+00:00:00.481 : uset g_flyspeed "100.0"
+00:00:00.481 : uset g_online_loading_screens "-1"
+00:00:00.482 : uset g_news "-1"
+00:00:00.482 : uset g_lang_init "en_gb"
+00:00:00.483 : uset g_col_offset_factor "1.0"
+00:00:00.483 : uset g_col_fill_backface "0"
+00:00:00.483 : uset g_col_fill_alpha "0.0"
+00:00:00.484 : uset g_colbox "0"
+00:00:00.484 : uset g_radio_saved_state "0"
+00:00:00.485 : uset g_radio_stream_safe "0"
+00:00:00.485 : uset g_radio_mode "2"
+00:00:00.485 : uset g_ignore_low_fps "0"
+00:00:00.486 : uset g_truck_light_specular "1"
+00:00:00.487 : uset g_gfx_all_scales "0"
+00:00:00.488 : uset g_gfx_advanced "0"
+00:00:00.488 : uset g_gfx_quality "-1"
+00:00:00.489 : uset g_hq_3d_scale "0.0"
+00:00:00.489 : uset g_hq_3d_screenshot "0"
+00:00:00.489 : uset g_menu_aa_limit "8"
+00:00:00.490 : uset g_additional_water_fov "20.0f"
+00:00:00.490 : uset g_water_reflect_actor "0"
+00:00:00.491 : uset g_rain_sensor "0"
+00:00:00.491 : uset g_rain_reflect_hookups "1"
+00:00:00.491 : uset g_rain_reflect_actor "1"
+00:00:00.492 : uset g_rain_reflect_traffic "1"
+00:00:00.492 : uset g_rain_reflect_cache "1"
+00:00:00.492 : uset g_rain_reflection "3"
+00:00:00.493 : uset g_reflection_scale "0"
+00:00:00.493 : uset g_reflection "3"
+00:00:00.493 : uset g_grass_density "2"
+00:00:00.494 : uset g_veg_detail "2"
+00:00:00.494 : uset g_save_indicator "1"
+00:00:00.495 : uset g_game_version "0"
+00:00:00.495 : uset g_force_online_lscrs "0"
+00:00:00.495 : uset g_hw_info "1"
+00:00:00.496 : uset g_glass_debugging_level "0"
+00:00:00.496 : uset g_line_sort "0"
+00:00:00.497 : uset g_cargo_sort "0"
+00:00:00.497 : uset g_bloom_standard_deviation "0.5"
+00:00:00.497 : uset g_bloom_override "0"
+00:00:00.498 : uset g_bloom "1.0"
+00:00:00.498 : uset g_global_force_load_selector "0"
+00:00:00.498 : uset g_desktop_fadeout "60"
+00:00:00.499 : uset g_item_check_speed "-1"
+00:00:00.499 : uset g_debug_allocators "-1"
+00:00:00.500 : uset g_suspension_auto_reset "1"
+00:00:00.500 : uset g_upshift_coef "0.3"
+00:00:00.501 : uset g_downshift_coef "0.8"
+00:00:00.501 : uset g_minicon "0"
+00:00:00.501 : uset g_console_state "0"
+00:00:00.502 : uset g_console "0"
+00:00:00.502 : uset g_fps "0"
+00:00:00.503 : uset ui_tooltip_delay "0.4"
+00:00:00.504 : uset r_imgui_scale "1.0"
+00:00:00.504 : uset r_vulkan_runtime ""
+00:00:00.505 : uset r_windowed_borderless "-1"
+00:00:00.506 : uset r_fullscreen_borderless "-1"
+00:00:00.506 : uset r_fullscreen "1"
+00:00:00.507 : uset r_output "-1"
+00:00:00.507 : uset r_adapter "-1"
+00:00:00.508 : uset r_vsync "1"
+00:00:00.508 : uset r_anisotropy_factor "0.25"
+00:00:00.509 : uset r_texture_detail "0"
+00:00:00.509 : uset v_bug_break "0"
+00:00:00.510 : uset t_ignore_hmd_timing "0"
+00:00:00.510 : uset t_limit_fps_inactive "30"
+00:00:00.511 : uset t_limit_fps "300"
+00:00:00.511 : uset t_locked_fps "0"
+00:00:00.512 : uset t_averaging_window_duration "100"
+00:00:00.512 : uset t_averaging_window_length "10"
+00:00:00.657 : [lang] Language autodetection: 0
+00:00:00.733 : Selected language: en_gb
+00:00:00.734 : Euro Truck Simulator 2 init ver.1.60.1.0s (rev. 093a3987e9bc)
+00:00:00.804 : Banlist loading...
+00:00:00.805 : === BAN LIST ===
+00:00:00.805 : ================
+00:00:00.806 : dispatch
+00:00:00.806 : server_cfg
+00:00:00.825 : server
+00:00:00.834 : [mods] Active 0 mods (local: 0, workshop: 0)
+00:00:00.834 : [ufs] mod pool: 0 packs, 0 files, 0 dirs
+00:00:00.848 : [ufs] scs pool: 5 packs, 71406 files, 2703 dirs
+00:00:01.035 : <WARNING> Missing default icon for cargo 'acetylene'.
+00:00:01.036 : <WARNING> Missing default icon for cargo 'acid'.
+00:00:01.039 : <WARNING> Missing default icon for cargo 'air_mails'.
+00:00:01.041 : <WARNING> Missing default icon for cargo 'aircft_tires'.
+00:00:01.042 : <WARNING> Missing default icon for cargo 'almond'.
+00:00:01.043 : <WARNING> Missing default icon for cargo 'alu_ingot'.
+00:00:01.043 : <WARNING> Missing default icon for cargo 'alu_profile'.
+00:00:01.044 : <WARNING> Missing default icon for cargo 'ammonia'.
+00:00:01.044 : <WARNING> Missing default icon for cargo 'ammunition'.
+00:00:01.045 : <WARNING> Missing default icon for cargo 'apples'.
+00:00:01.045 : <WARNING> Missing default icon for cargo 'apples_c'.
+00:00:01.046 : <WARNING> Missing default icon for cargo 'arsenic'.
+00:00:01.046 : <WARNING> Missing default icon for cargo 'atl_cod_flt'.
+00:00:01.047 : <WARNING> Missing default icon for cargo 'backfl_prev'.
+00:00:01.048 : <WARNING> Missing default icon for cargo 'barley'.
+00:00:01.048 : <WARNING> Missing default icon for cargo 'basil'.
+00:00:01.049 : <WARNING> Missing default icon for cargo 'battery'.
+00:00:01.049 : <WARNING> Missing default icon for cargo 'beans'.
+00:00:01.050 : <WARNING> Missing default icon for cargo 'beef_meat'.
+00:00:01.050 : <WARNING> Missing default icon for cargo 'beverages'.
+00:00:01.051 : <WARNING> Missing default icon for cargo 'beverages_c'.
+00:00:01.052 : <WARNING> Missing default icon for cargo 'beverages_t'.
+00:00:01.052 : <WARNING> Missing default icon for cargo 'big_bag_seed'.
+00:00:01.053 : <WARNING> Missing default icon for cargo 'boric_acid'.
+00:00:01.055 : <WARNING> Missing default icon for cargo 'bottle_water'.
+00:00:01.057 : <WARNING> Missing default icon for cargo 'brake_fluid'.
+00:00:01.058 : <WARNING> Missing default icon for cargo 'brake_pads'.
+00:00:01.058 : <WARNING> Missing default icon for cargo 'bricks'.
+00:00:01.059 : <WARNING> Missing default icon for cargo 'can_sardines'.
+00:00:01.060 : <WARNING> Missing default icon for cargo 'canned_beans'.
+00:00:01.060 : <WARNING> Missing default icon for cargo 'canned_beef'.
+00:00:01.061 : <WARNING> Missing default icon for cargo 'canned_pork'.
+00:00:01.062 : <WARNING> Missing default icon for cargo 'canned_tuna'.
+00:00:01.062 : <WARNING> Missing default icon for cargo 'car_balt1'.
+00:00:01.063 : <WARNING> Missing default icon for cargo 'car_balt2'.
+00:00:01.064 : <WARNING> Missing default icon for cargo 'car_d'.
+00:00:01.065 : <WARNING> Missing default icon for cargo 'car_f'.
+00:00:01.067 : <WARNING> Missing default icon for cargo 'car_gr'.
+00:00:01.067 : <WARNING> Missing default icon for cargo 'car_ibe'.
+00:00:01.068 : <WARNING> Missing default icon for cargo 'car_it'.
+00:00:01.068 : <WARNING> Missing default icon for cargo 'caravans'.
+00:00:01.069 : <WARNING> Missing default icon for cargo 'carb_water'.
+00:00:01.073 : <WARNING> Missing default icon for cargo 'carbn_pwdr_c'.
+00:00:01.075 : <WARNING> Missing default icon for cargo 'carrots'.
+00:00:01.077 : <WARNING> Missing default icon for cargo 'carrots_c'.
+00:00:01.077 : <WARNING> Missing default icon for cargo 'cars_fr'.
+00:00:01.078 : <WARNING> Missing default icon for cargo 'cauliflower'.
+00:00:01.078 : <WARNING> Missing default icon for cargo 'caviar'.
+00:00:01.079 : <WARNING> Missing default icon for cargo 'cement'.
+00:00:01.079 : <WARNING> Missing default icon for cargo 'cheese'.
+00:00:01.080 : <WARNING> Missing default icon for cargo 'chem_granule'.
+00:00:01.080 : <WARNING> Missing default icon for cargo 'chem_sorb_c'.
+00:00:01.081 : <WARNING> Missing default icon for cargo 'chem_sorbent'.
+00:00:01.082 : <WARNING> Missing default icon for cargo 'chemicals'.
+00:00:01.082 : <WARNING> Missing default icon for cargo 'chewing_gums'.
+00:00:01.083 : <WARNING> Missing default icon for cargo 'chicken_meat'.
+00:00:01.083 : <WARNING> Missing default icon for cargo 'chimney_syst'.
+00:00:01.084 : <WARNING> Missing default icon for cargo 'chlorine'.
+00:00:01.084 : <WARNING> Missing default icon for cargo 'chlorine_t'.
+00:00:01.085 : <WARNING> Missing default icon for cargo 'chocolate'.
+00:00:01.086 : <WARNING> Missing default icon for cargo 'clothes'.
+00:00:01.088 : <WARNING> Missing default icon for cargo 'clothes_c'.
+00:00:01.089 : <WARNING> Missing default icon for cargo 'coal'.
+00:00:01.091 : <WARNING> Missing default icon for cargo 'coconut_milk'.
+00:00:01.091 : <WARNING> Missing default icon for cargo 'coconut_oil'.
+00:00:01.091 : <WARNING> Missing default icon for cargo 'comp_process'.
+00:00:01.092 : <WARNING> Missing default icon for cargo 'conc_juice_t'.
+00:00:01.093 : <WARNING> Missing default icon for cargo 'concen_juice'.
+00:00:01.094 : <WARNING> Missing default icon for cargo 'concr_beams2'.
+00:00:01.095 : <WARNING> Missing default icon for cargo 'concr_cent'.
+00:00:01.095 : <WARNING> Missing default icon for cargo 'concr_stair'.
+00:00:01.096 : <WARNING> Missing default icon for cargo 'cont_trees'.
+00:00:01.097 : <WARNING> Missing default icon for cargo 'contamin'.
+00:00:01.097 : <WARNING> Missing default icon for cargo 'copp_rf_gutt'.
+00:00:01.098 : <WARNING> Missing default icon for cargo 'corks'.
+00:00:01.098 : <WARNING> Missing default icon for cargo 'cott_cheese'.
+00:00:01.099 : <WARNING> Missing default icon for cargo 'cott_harvest'.
+00:00:01.099 : <WARNING> Missing default icon for cargo 'crawler'.
+00:00:01.100 : <WARNING> Missing default icon for cargo 'cut_flowers'.
+00:00:01.101 : <WARNING> Missing default icon for cargo 'cyanide'.
+00:00:01.101 : <WARNING> Missing default icon for cargo 'czl_es300'.
+00:00:01.102 : <WARNING> Missing default icon for cargo 'czl_muv75'.
+00:00:01.102 : <WARNING> Missing default icon for cargo 'daf_tr'.
+00:00:01.104 : <WARNING> Missing default icon for cargo 'desinfection'.
+00:00:01.105 : <WARNING> Missing default icon for cargo 'diesel'.
+00:00:01.106 : <WARNING> Missing default icon for cargo 'diesel_gen'.
+00:00:01.106 : <WARNING> Missing default icon for cargo 'digger1000'.
+00:00:01.107 : <WARNING> Missing default icon for cargo 'digger500'.
+00:00:01.108 : <WARNING> Missing default icon for cargo 'dryers'.
+00:00:01.108 : <WARNING> Missing default icon for cargo 'drymilk'.
+00:00:01.109 : <WARNING> Missing default icon for cargo 'dynamite'.
+00:00:01.110 : <WARNING> Missing default icon for cargo 'elect_wiring'.
+00:00:01.111 : <WARNING> Missing default icon for cargo 'electronics'.
+00:00:01.112 : <WARNING> Missing default icon for cargo 'emp_wine_bar'.
+00:00:01.112 : <WARNING> Missing default icon for cargo 'emp_wine_bot'.
+00:00:01.113 : <WARNING> Missing default icon for cargo 'empty_barr'.
+00:00:01.114 : <WARNING> Missing default icon for cargo 'empty_palet'.
+00:00:01.115 : <WARNING> Missing default icon for cargo 'empty_spool'.
+00:00:01.115 : <WARNING> Missing default icon for cargo 'emptytank'.
+00:00:01.116 : <WARNING> Missing default icon for cargo 'ethane'.
+00:00:01.117 : <WARNING> Missing default icon for cargo 'excav_soil'.
+00:00:01.118 : <WARNING> Missing default icon for cargo 'excavator'.
+00:00:01.118 : <WARNING> Missing default icon for cargo 'exhausts_c'.
+00:00:01.119 : <WARNING> Missing default icon for cargo 'explosives'.
+00:00:01.119 : <WARNING> Missing default icon for cargo 'fertilizer'.
+00:00:01.121 : <WARNING> Missing default icon for cargo 'fireworks'.
+00:00:01.122 : <WARNING> Missing default icon for cargo 'fish_chips'.
+00:00:01.123 : <WARNING> Missing default icon for cargo 'floorpanels'.
+00:00:01.124 : <WARNING> Missing default icon for cargo 'flour'.
+00:00:01.124 : <WARNING> Missing default icon for cargo 'fluorine'.
+00:00:01.125 : <WARNING> Missing default icon for cargo 'food_oil_t'.
+00:00:01.126 : <WARNING> Missing default icon for cargo 'forklifts'.
+00:00:01.126 : <WARNING> Missing default icon for cargo 'fresh_fish'.
+00:00:01.127 : <WARNING> Missing default icon for cargo 'froz_octopi'.
+00:00:01.128 : <WARNING> Missing default icon for cargo 'frozen_hake'.
+00:00:01.128 : <WARNING> Missing default icon for cargo 'frsh_herbs'.
+00:00:01.129 : <WARNING> Missing default icon for cargo 'fuel_oil'.
+00:00:01.130 : <WARNING> Missing default icon for cargo 'fuel_tanks'.
+00:00:01.130 : <WARNING> Missing default icon for cargo 'fueltanker'.
+00:00:01.131 : <WARNING> Missing default icon for cargo 'furniture'.
+00:00:01.132 : <WARNING> Missing default icon for cargo 'garlic'.
+00:00:01.132 : <WARNING> Missing default icon for cargo 'glass'.
+00:00:01.133 : <WARNING> Missing default icon for cargo 'glass_packed'.
+00:00:01.133 : <WARNING> Missing default icon for cargo 'gnocchi'.
+00:00:01.134 : <WARNING> Missing default icon for cargo 'goat_cheese'.
+00:00:01.135 : <WARNING> Missing default icon for cargo 'granite_cube'.
+00:00:01.135 : <WARNING> Missing default icon for cargo 'grapes'.
+00:00:01.136 : <WARNING> Missing default icon for cargo 'graph_grease'.
+00:00:01.137 : <WARNING> Missing default icon for cargo 'grass_rolls'.
+00:00:01.138 : <WARNING> Missing default icon for cargo 'gravel'.
+00:00:01.140 : <WARNING> Missing default icon for cargo 'guard_rails'.
+00:00:01.141 : <WARNING> Missing default icon for cargo 'gummy_bears'.
+00:00:01.143 : <WARNING> Missing default icon for cargo 'harvest_bins'.
+00:00:01.143 : <WARNING> Missing default icon for cargo 'hchemicals'.
+00:00:01.144 : <WARNING> Missing default icon for cargo 'hi_volt_cabl'.
+00:00:01.144 : <WARNING> Missing default icon for cargo 'hipresstank'.
+00:00:01.145 : <WARNING> Missing default icon for cargo 'hmetal'.
+00:00:01.146 : <WARNING> Missing default icon for cargo 'honey'.
+00:00:01.146 : <WARNING> Missing default icon for cargo 'horse_tr'.
+00:00:01.147 : <WARNING> Missing default icon for cargo 'hvac'.
+00:00:01.148 : <WARNING> Missing default icon for cargo 'hwaste'.
+00:00:01.149 : <WARNING> Missing default icon for cargo 'hydrochlor'.
+00:00:01.149 : <WARNING> Missing default icon for cargo 'hydrogen'.
+00:00:01.150 : <WARNING> Missing default icon for cargo 'ibc_cont'.
+00:00:01.150 : <WARNING> Missing default icon for cargo 'icecream'.
+00:00:01.151 : <WARNING> Missing default icon for cargo 'iced_coffee'.
+00:00:01.152 : <WARNING> Missing default icon for cargo 'iron_pipes'.
+00:00:01.152 : <WARNING> Missing default icon for cargo 'kerosene'.
+00:00:01.154 : <WARNING> Missing default icon for cargo 'ketchup'.
+00:00:01.156 : <WARNING> Missing default icon for cargo 'lamb_stom'.
+00:00:01.159 : <WARNING> Missing default icon for cargo 'large_cont'.
+00:00:01.159 : <WARNING> Missing default icon for cargo 'largetubes'.
+00:00:01.160 : <WARNING> Missing default icon for cargo 'lavender'.
+00:00:01.161 : <WARNING> Missing default icon for cargo 'lead'.
+00:00:01.162 : <WARNING> Missing default icon for cargo 'limonades'.
+00:00:01.162 : <WARNING> Missing default icon for cargo 'live_cattle'.
+00:00:01.163 : <WARNING> Missing default icon for cargo 'live_pigs'.
+00:00:01.163 : <WARNING> Missing default icon for cargo 'liver_paste'.
+00:00:01.164 : <WARNING> Missing default icon for cargo 'logs'.
+00:00:01.165 : <WARNING> Missing default icon for cargo 'lpg'.
+00:00:01.165 : <WARNING> Missing default icon for cargo 'lpg_t'.
+00:00:01.166 : <WARNING> Missing default icon for cargo 'lumber'.
+00:00:01.167 : <WARNING> Missing default icon for cargo 'lumber_p'.
+00:00:01.168 : <WARNING> Missing default icon for cargo 'lux_yacht'.
+00:00:01.168 : <WARNING> Missing default icon for cargo 'magnesium'.
+00:00:01.169 : <WARNING> Missing default icon for cargo 'maple_syrup'.
+00:00:01.169 : <WARNING> Missing default icon for cargo 'marb_blck'.
+00:00:01.171 : <WARNING> Missing default icon for cargo 'marb_blck2'.
+00:00:01.172 : <WARNING> Missing default icon for cargo 'marb_slab'.
+00:00:01.173 : <WARNING> Missing default icon for cargo 'mason_jars'.
+00:00:01.173 : <WARNING> Missing default icon for cargo 'mat_handler'.
+00:00:01.174 : <WARNING> Missing default icon for cargo 'med_equip'.
+00:00:01.175 : <WARNING> Missing default icon for cargo 'med_vaccine'.
+00:00:01.176 : <WARNING> Missing default icon for cargo 'mercuric'.
+00:00:01.176 : <WARNING> Missing default icon for cargo 'metal_beams'.
+00:00:01.177 : <WARNING> Missing default icon for cargo 'metal_cans'.
+00:00:01.178 : <WARNING> Missing default icon for cargo 'metal_pipes'.
+00:00:01.179 : <WARNING> Missing default icon for cargo 'milk'.
+00:00:01.180 : <WARNING> Missing default icon for cargo 'milk_t'.
+00:00:01.181 : <WARNING> Missing default icon for cargo 'mobile_compr'.
+00:00:01.181 : <WARNING> Missing default icon for cargo 'mondeos'.
+00:00:01.183 : <WARNING> Missing default icon for cargo 'moto_tires'.
+00:00:01.183 : <WARNING> Missing default icon for cargo 'motor_oil'.
+00:00:01.184 : <WARNING> Missing default icon for cargo 'motor_oil_c'.
+00:00:01.185 : <WARNING> Missing default icon for cargo 'motorcycles'.
+00:00:01.185 : <WARNING> Missing default icon for cargo 'mozzarela'.
+00:00:01.186 : <WARNING> Missing default icon for cargo 'mtl_coil'.
+00:00:01.187 : <WARNING> Missing default icon for cargo 'natur_rubber'.
+00:00:01.188 : <WARNING> Missing default icon for cargo 'neon'.
+00:00:01.189 : <WARNING> Missing default icon for cargo 'nitrocel'.
+00:00:01.189 : <WARNING> Missing default icon for cargo 'nitrogen'.
+00:00:01.191 : <WARNING> Missing default icon for cargo 'nonalco_beer'.
+00:00:01.192 : <WARNING> Missing default icon for cargo 'nuts'.
+00:00:01.192 : <WARNING> Missing default icon for cargo 'nylon_cord'.
+00:00:01.193 : <WARNING> Missing default icon for cargo 'oil'.
+00:00:01.193 : <WARNING> Missing default icon for cargo 'oil_filt_c'.
+00:00:01.194 : <WARNING> Missing default icon for cargo 'oil_filters'.
+00:00:01.194 : <WARNING> Missing default icon for cargo 'olive_oil'.
+00:00:01.195 : <WARNING> Missing default icon for cargo 'olive_oil_t'.
+00:00:01.195 : <WARNING> Missing default icon for cargo 'olive_tree'.
+00:00:01.196 : <WARNING> Missing default icon for cargo 'olives'.
+00:00:01.197 : <WARNING> Missing default icon for cargo 'onion'.
+00:00:01.198 : <WARNING> Missing default icon for cargo 'oranges'.
+00:00:01.199 : <WARNING> Missing default icon for cargo 'ore'.
+00:00:01.199 : <WARNING> Missing default icon for cargo 'outdr_flr_tl'.
+00:00:01.200 : <WARNING> Missing default icon for cargo 'overweight'.
+00:00:01.201 : <WARNING> Missing default icon for cargo 'packag_food'.
+00:00:01.201 : <WARNING> Missing default icon for cargo 'paper'.
+00:00:01.201 : <WARNING> Missing default icon for cargo 'pasta'.
+00:00:01.202 : <WARNING> Missing default icon for cargo 'pears'.
+00:00:01.205 : <WARNING> Missing default icon for cargo 'peas'.
+00:00:01.205 : <WARNING> Missing default icon for cargo 'perfor_frks'.
+00:00:01.206 : <WARNING> Missing default icon for cargo 'pesticide'.
+00:00:01.207 : <WARNING> Missing default icon for cargo 'pesto'.
+00:00:01.208 : <WARNING> Missing default icon for cargo 'pet_food'.
+00:00:01.208 : <WARNING> Missing default icon for cargo 'pet_food_c'.
+00:00:01.209 : <WARNING> Missing default icon for cargo 'petrol'.
+00:00:01.209 : <WARNING> Missing default icon for cargo 'phosphor'.
+00:00:01.210 : <WARNING> Missing default icon for cargo 'pickup_gr'.
+00:00:01.210 : <WARNING> Missing default icon for cargo 'plant_substr'.
+00:00:01.211 : <WARNING> Missing default icon for cargo 'plast_film'.
+00:00:01.211 : <WARNING> Missing default icon for cargo 'plast_film_c'.
+00:00:01.212 : <WARNING> Missing default icon for cargo 'plast_pipes'.
+00:00:01.212 : <WARNING> Missing default icon for cargo 'plastic_gra'.
+00:00:01.212 : <WARNING> Missing default icon for cargo 'plumb_suppl'.
+00:00:01.213 : <WARNING> Missing default icon for cargo 'plums'.
+00:00:01.213 : <WARNING> Missing default icon for cargo 'pnut_butter'.
+00:00:01.213 : <WARNING> Missing default icon for cargo 'polyst_box'.
+00:00:01.214 : <WARNING> Missing default icon for cargo 'pork_meat'.
+00:00:01.214 : <WARNING> Missing default icon for cargo 'post_packag'.
+00:00:01.215 : <WARNING> Missing default icon for cargo 'pot_flowers'.
+00:00:01.215 : <WARNING> Missing default icon for cargo 'potahydro'.
+00:00:01.215 : <WARNING> Missing default icon for cargo 'potassium'.
+00:00:01.216 : <WARNING> Missing default icon for cargo 'potatoes'.
+00:00:01.216 : <WARNING> Missing default icon for cargo 'precast_strs'.
+00:00:01.217 : <WARNING> Missing default icon for cargo 'press_sl_val'.
+00:00:01.218 : <WARNING> Missing default icon for cargo 'propane'.
+00:00:01.218 : <WARNING> Missing default icon for cargo 'prosciutto'.
+00:00:01.219 : <WARNING> Missing default icon for cargo 'protec_cloth'.
+00:00:01.219 : <WARNING> Missing default icon for cargo 'pumps'.
+00:00:01.219 : <WARNING> Missing default icon for cargo 'radiators'.
+00:00:01.220 : <WARNING> Missing default icon for cargo 're_bars'.
+00:00:01.220 : <WARNING> Missing default icon for cargo 'refl_posts'.
+00:00:01.221 : <WARNING> Missing default icon for cargo 'rice'.
+00:00:01.221 : <WARNING> Missing default icon for cargo 'rice_c'.
+00:00:01.222 : <WARNING> Missing default icon for cargo 'roof_tiles'.
+00:00:01.222 : <WARNING> Missing default icon for cargo 'roofing_felt'.
+00:00:01.223 : <WARNING> Missing default icon for cargo 'rooflights'.
+00:00:01.223 : <WARNING> Missing default icon for cargo 'rye'.
+00:00:01.224 : <WARNING> Missing default icon for cargo 'salm_fillet'.
+00:00:01.224 : <WARNING> Missing default icon for cargo 'salt_spice_c'.
+00:00:01.224 : <WARNING> Missing default icon for cargo 'salt_spices'.
+00:00:01.225 : <WARNING> Missing default icon for cargo 'sand'.
+00:00:01.225 : <WARNING> Missing default icon for cargo 'sandwch_pnls'.
+00:00:01.226 : <WARNING> Missing default icon for cargo 'sausages'.
+00:00:01.226 : <WARNING> Missing default icon for cargo 'sawpanels'.
+00:00:01.227 : <WARNING> Missing default icon for cargo 'scaffoldings'.
+00:00:01.227 : <WARNING> Missing default icon for cargo 'scania_tr'.
+00:00:01.228 : <WARNING> Missing default icon for cargo 'scooters'.
+00:00:01.230 : <WARNING> Missing default icon for cargo 'scrap_metals'.
+00:00:01.231 : <WARNING> Missing default icon for cargo 'seal_bearing'.
+00:00:01.231 : <WARNING> Missing default icon for cargo 'sheep_wool'.
+00:00:01.232 : <WARNING> Missing default icon for cargo 'shock_absorb'.
+00:00:01.233 : <WARNING> Missing default icon for cargo 'silica'.
+00:00:01.233 : <WARNING> Missing default icon for cargo 'smokd_eel'.
+00:00:01.234 : <WARNING> Missing default icon for cargo 'smokd_sprats'.
+00:00:01.236 : <WARNING> Missing default icon for cargo 'sodchlor'.
+00:00:01.237 : <WARNING> Missing default icon for cargo 'sodhydro'.
+00:00:01.239 : <WARNING> Missing default icon for cargo 'sodium'.
+00:00:01.240 : <WARNING> Missing default icon for cargo 'soy_milk'.
+00:00:01.242 : <WARNING> Missing default icon for cargo 'soy_milk_t'.
+00:00:01.243 : <WARNING> Missing default icon for cargo 'spher_valves'.
+00:00:01.243 : <WARNING> Missing default icon for cargo 'sq_tub'.
+00:00:01.245 : <WARNING> Missing default icon for cargo 'steel_cord'.
+00:00:01.246 : <WARNING> Missing default icon for cargo 'stone_dust'.
+00:00:01.246 : <WARNING> Missing default icon for cargo 'stone_wool'.
+00:00:01.247 : <WARNING> Missing default icon for cargo 'stones'.
+00:00:01.248 : <WARNING> Missing default icon for cargo 'straw_bales'.
+00:00:01.248 : <WARNING> Missing default icon for cargo 'sugar'.
+00:00:01.249 : <WARNING> Missing default icon for cargo 'sugar_b'.
+00:00:01.249 : <WARNING> Missing default icon for cargo 'sulfur'.
+00:00:01.250 : <WARNING> Missing default icon for cargo 'sulfuric'.
+00:00:01.250 : <WARNING> Missing default icon for cargo 'sulfuric_t'.
+00:00:01.251 : <WARNING> Missing default icon for cargo 'tableware'.
+00:00:01.251 : <WARNING> Missing default icon for cargo 'ter_forklift'.
+00:00:01.252 : <WARNING> Missing default icon for cargo 'tomatoes'.
+00:00:01.252 : <WARNING> Missing default icon for cargo 'toys'.
+00:00:01.253 : <WARNING> Missing default icon for cargo 'tractors'.
+00:00:01.253 : <WARNING> Missing default icon for cargo 'train_part'.
+00:00:01.254 : <WARNING> Missing default icon for cargo 'train_part2'.
+00:00:01.255 : <WARNING> Missing default icon for cargo 'transmis'.
+00:00:01.255 : <WARNING> Missing default icon for cargo 'truck_batt'.
+00:00:01.256 : <WARNING> Missing default icon for cargo 'truck_batt_c'.
+00:00:01.256 : <WARNING> Missing default icon for cargo 'truck_rims'.
+00:00:01.257 : <WARNING> Missing default icon for cargo 'truck_rims_c'.
+00:00:01.257 : <WARNING> Missing default icon for cargo 'truck_tyres'.
+00:00:01.258 : <WARNING> Missing default icon for cargo 'tyres'.
+00:00:01.259 : <WARNING> Missing default icon for cargo 'used_battery'.
+00:00:01.259 : <WARNING> Missing default icon for cargo 'used_packag'.
+00:00:01.260 : <WARNING> Missing default icon for cargo 'used_plast'.
+00:00:01.260 : <WARNING> Missing default icon for cargo 'used_plast_c'.
+00:00:01.261 : <WARNING> Missing default icon for cargo 'vans_fd'.
+00:00:01.261 : <WARNING> Missing default icon for cargo 'vans_id'.
+00:00:01.261 : <WARNING> Missing default icon for cargo 'vans_vt'.
+00:00:01.262 : <WARNING> Missing default icon for cargo 'vent_tube'.
+00:00:01.262 : <WARNING> Missing default icon for cargo 'vinegar'.
+00:00:01.262 : <WARNING> Missing default icon for cargo 'vinegar_c'.
+00:00:01.263 : <WARNING> Missing default icon for cargo 'volvo_cars'.
+00:00:01.263 : <WARNING> Missing default icon for cargo 'volvo_tr'.
+00:00:01.263 : <WARNING> Missing default icon for cargo 'wallpanels'.
+00:00:01.264 : <WARNING> Missing default icon for cargo 'watermelons'.
+00:00:01.264 : <WARNING> Missing default icon for cargo 'watertank'.
+00:00:01.264 : <WARNING> Missing default icon for cargo 'wheat'.
+00:00:01.265 : <WARNING> Missing default icon for cargo 'windml_eng'.
+00:00:01.265 : <WARNING> Missing default icon for cargo 'windml_tube'.
+00:00:01.265 : <WARNING> Missing default icon for cargo 'wood_bark'.
+00:00:01.266 : <WARNING> Missing default icon for cargo 'wooden_beams'.
+00:00:01.266 : <WARNING> Missing default icon for cargo 'wrk_cloth'.
+00:00:01.266 : <WARNING> Missing default icon for cargo 'wshavings'.
+00:00:01.267 : <WARNING> Missing default icon for cargo 'yogurt'.
+00:00:01.267 : <WARNING> Missing default icon for cargo 'young_seed'.
+00:00:01.382 : Collecting Vehicle definitions...
+00:00:01.394 : Loaded traffic trailers of type 'truck_semi': 24
+00:00:01.395 : Loaded traffic trailers of type 'truck_long': 0
+00:00:01.397 : Loaded traffic trailers of type 'train_cargo': 13
+00:00:01.400 : Loaded traffic trailers of type 'car': 7
+00:00:01.401 : Loaded traffic trailers of type 'bus': 0
+00:00:01.406 : Loaded traffic trailers of type 'truck': 32
+00:00:01.414 : Loaded traffic trailers of type 'tram': 89
+00:00:01.424 : Loaded traffic trailers of type 'train': 108
+00:00:01.424 : Loaded traffic trailers of type 'special': 0
+00:00:01.433 : Loaded traffic vehicles of type 'car': 99
+00:00:01.438 : Loaded traffic vehicles of type 'car_custom': 55
+00:00:01.444 : Loaded traffic vehicles of type 'truck': 57
+00:00:01.448 : Loaded traffic vehicles of type 'truck_light': 29
+00:00:01.451 : Loaded traffic vehicles of type 'truck_medium': 14
+00:00:01.452 : Loaded traffic vehicles of type 'truck_heavy': 5
+00:00:01.454 : Loaded traffic vehicles of type 'truck_long': 0
+00:00:01.456 : Loaded traffic vehicles of type 'truck_custom': 17
+00:00:01.460 : Loaded traffic vehicles of type 'bus': 32
+00:00:01.461 : Loaded traffic vehicles of type 'bus_custom': 4
+00:00:01.465 : Loaded traffic vehicles of type 'tram': 52
+00:00:01.467 : Loaded traffic vehicles of type 'train': 11
+00:00:01.471 : Loaded traffic vehicles of type 'train_wire': 47
+00:00:01.472 : Loaded traffic vehicles of type 'train_custom': 4
+00:00:01.479 : Loaded traffic vehicles of type 'police': 68
+00:00:01.482 : Loaded traffic vehicles of type 'fire': 38
+00:00:01.484 : Loaded traffic vehicles of type 'medical': 34
+00:00:01.485 : Loaded traffic vehicles of type 'escort_front': 1
+00:00:01.486 : Loaded traffic vehicles of type 'escort_back': 1
+00:00:01.490 : Loaded traffic vehicles of type 'special': 9
+00:00:01.490 : Loaded addon hookups: 107
+00:00:01.491 : Linking cities with countries...
+00:00:01.491 : Collecting prefab descriptors...
+00:00:01.492 : Loading prefab descriptors...
+00:00:01.492 : Loading ferry connections...
+00:00:01.493 : Loading cargo trailer assignment...
+00:00:01.502 : Loading company cargo assignment...
+00:00:01.565 : [physx] @0: Starting server.
+00:00:01.565 : [physx] @0: Creating reporter.
+00:00:01.566 : [physx] @0: Created foundation version 1.0.0.
+00:00:01.566 : [physx] @0: Created physics version 3.4.3.
+00:00:01.568 : [physx] @0: Initialized extensions.
+00:00:01.569 : [physx] @0: Created CPU dispatcher with 2 threads and logical CPU affinities:
+00:00:01.569 : [physx] @0: CPU          0   1   2   3   4   5   6   7   8   9  10  11
+00:00:01.570 : [physx] @0: thread   0   *   *   *   *   *   *   *   *   *   *   *   *
+00:00:01.571 : [physx] @0: thread   1   *   *   *   *   *   *   *   *   *   *   *   *
+00:00:01.572 : [physx] @0: Created convex cooking.
+00:00:01.573 : [physx] @0: Created fast triangle cooking.
+00:00:01.573 : [physx] @0: Created optimal triangle cooking.
+00:00:01.574 : [physx] @0: Creating simulation filter.
+00:00:01.575 : [bullet] Starting server
+00:00:01.576 : [physx] @0: Creating debug draw.
+00:00:01.616 : [MP] =========================================================================
+00:00:01.616 : [MP] Session automated start
+00:00:01.617 : [MP] -------------------------------------------------------------------------
+00:00:01.618 : [MP] DLC - eu_balkane
+00:00:01.619 : [MP] DLC - eu_balkanw
+00:00:01.620 : [MP] DLC - eu_balt
+00:00:01.621 : [MP] DLC - eu_east
+00:00:01.621 : [MP] DLC - eu_fr
+00:00:01.622 : [MP] DLC - eu_greece
+00:00:01.623 : [MP] DLC - eu_iberia
+00:00:01.624 : [MP] DLC - eu_it
+00:00:01.625 : [MP] DLC - eu_north
+00:00:01.626 : [MP] DLC - eu_nordic
+00:00:01.627 : [MP] MOD - BASE
+00:00:01.628 : [MP] MOD - 	Model 1
+00:00:01.628 : [MP] MOD - PSV 1
+00:00:01.629 : [MP] MOD - PSV 2
+00:00:01.631 : [MP] MOD - PSV 3
+00:00:01.633 : [MP] MOD - Peru Server MP 【PSV】
+00:00:01.634 : [MP] MOD - Actualizador
+00:00:01.634 : [MP] -------------------------------------------------------------------------
+00:00:01.635 : [MP] Server init
+00:00:03.163 : [MP] LogOn Anonymous
+00:00:04.446 : [SERVICES] Steam connected
+00:00:04.446 : [MP] Steam connected
+00:00:04.447 : [MP] Settings init
+00:00:04.448 : [MP] Init steam game server params
+00:00:04.450 : <WARNING> [MP] Warning: Proper player limit exceeded.
+00:00:04.453 : [MP] Initiate server-client.
+00:00:04.455 : [MP] Session started.
+00:00:04.456 : [MP] Server created.
+00:00:04.456 : [MP] =========================================================================
+00:00:04.457 : [MP] 
+00:00:04.457 : [MP] Session search id: 90288608705332228/101
+00:00:04.458 : [MP] Session name: PERU IM
+00:00:04.458 : [MP] Session description: IMPeru Server
+00:00:04.459 : [MP] Maximum number of players: 128
+00:00:04.459 : [MP] Connection virtual ports: 100 / 101
+00:00:04.459 : [MP] Connection server ports: 27015 / 27016
+00:00:04.460 : [MP] Friends only: False
+00:00:04.460 : [MP] 
+00:00:04.461 : [MP] Damage from players: True
+00:00:04.461 : [MP] Traffic enabled: True
+00:00:04.462 : [MP] Hide player in company: False
+00:00:04.462 : [MP] Hide colliding players: True
+00:00:04.463 : [MP] Force speed limiter: False
+00:00:04.463 : [MP] Show name tags: True
+00:00:04.463 : [MP] Disable collisions in service: False
+00:00:04.464 : [MP] Timezones: False
+00:00:04.464 : [MP] Mods optioning: False
+00:00:04.465 : [MP] 
+00:00:04.466 : [MP] Game version: 1.60s
+00:00:04.466 : [MP] Map name: /map/ncs.mbd
+00:00:04.466 : [MP] Password required: No
+00:00:04.467 : [MP] Modded session: Yes
+00:00:04.467 : [MP] 
+00:00:04.468 : [MP] =========================================================================
+00:00:04.468 : [MP] Session running.
+00:00:27.059 : [MP] State: running;  Time: 4456;  Players: 0
+00:00:27.062 : [MP] [Chat] Bienvenido a IMPeru!
+00:03:04.471 : [MP] State: running;  Time: 184458;  Players: 0
+00:05:12.105 : [MP] [Chat] [JDT] Bless. connected
+00:05:12.106 : [MP] [JDT] Bless. connected, client_id = 10 
+00:06:04.473 : [MP] State: running;  Time: 364461;  Players: 1
+00:09:04.475 : [MP] State: running;  Time: 544463;  Players: 1
+00:12:04.480 : [MP] State: running;  Time: 724467;  Players: 1
+00:15:04.310 : [MP] [Chat] [JDT] Bless. disconnected
+00:15:04.311 : [MP] [JDT] Bless. disconnected, client_id = 10 
+00:15:04.481 : [MP] State: running;  Time: 904469;  Players: 0
+00:18:04.484 : [MP] State: running;  Time: 1084472;  Players: 0
+00:21:04.488 : [MP] State: running;  Time: 1264476;  Players: 0
+00:24:04.490 : [MP] State: running;  Time: 1444478;  Players: 0
+00:27:04.491 : [MP] State: running;  Time: 1624479;  Players: 0
+00:30:04.492 : [MP] State: running;  Time: 1804480;  Players: 0
+00:33:04.494 : [MP] State: running;  Time: 1984482;  Players: 0
+00:36:04.499 : [MP] State: running;  Time: 2164487;  Players: 0
+00:39:04.502 : [MP] State: running;  Time: 2344490;  Players: 0
+00:42:04.507 : [MP] State: running;  Time: 2524495;  Players: 0
+00:43:15.908 : [MP] [Chat] [GM] PANDA connected
+00:43:15.909 : [MP] [GM] PANDA connected, client_id = 11 
+00:45:04.508 : [MP] State: running;  Time: 2704496;  Players: 1
+00:48:04.509 : [MP] State: running;  Time: 2884497;  Players: 1
+00:48:23.630 : [MP] [Chat] [GM] PANDA disconnected
+00:48:23.631 : [MP] [GM] PANDA disconnected, client_id = 11 
+00:51:04.510 : [MP] State: running;  Time: 3064497;  Players: 0
+00:51:14.177 : [MP] [Chat] [ZBS] aXo connected
+00:51:14.178 : [MP] [ZBS] aXo connected, client_id = 12 
+00:52:09.291 : [MP] [Chat] [TRM] Capybara connected
+00:52:09.293 : [MP] [TRM] Capybara connected, client_id = 13 
+00:52:23.166 : [MP] [Chat] ohñooooo
+00:53:04.017 : [MP] [Chat] @@qr_reac_001@@
+00:54:04.512 : [MP] State: running;  Time: 3244499;  Players: 2
+00:57:04.513 : [MP] State: running;  Time: 3424500;  Players: 2
+01:00:04.516 : [MP] State: running;  Time: 3604504;  Players: 2
+01:03:04.521 : [MP] State: running;  Time: 3784508;  Players: 2
+01:05:26.199 : [MP] [Chat] ¶ connected
+01:05:26.200 : [MP] ¶ connected, client_id = 14 
+01:05:40.176 : [MP] [Chat] @@qr_reac_001@@
+01:06:04.522 : [MP] State: running;  Time: 3964509;  Players: 3
+01:08:58.947 : [MP] [Chat] [JDT] Bless. connected
+01:08:58.948 : [MP] [JDT] Bless. connected, client_id = 15 
+01:09:04.525 : [MP] State: running;  Time: 4144513;  Players: 4
+01:09:06.956 : [MP] [Chat] @@qr_reac_001@@
+01:10:11.376 : [MP] [Chat] todos plaza norte
+01:10:38.416 : [MP] [Chat] toy haciendo ruta :v
+01:10:40.122 : [MP] [Chat] [GM] PANDA connected
+01:10:40.123 : [MP] [GM] PANDA connected, client_id = 16 
+01:12:04.529 : [MP] State: running;  Time: 4324517;  Players: 5
+01:12:09.289 : [MP] [Chat] [APS] CHARLY:D connected
+01:12:09.290 : [MP] [APS] CHARLY:D connected, client_id = 17 
+01:12:11.770 : [MP] [Chat] [CIAL] DeYtroN connected
+01:12:11.772 : [MP] [CIAL] DeYtroN connected, client_id = 18 
+01:12:42.680 : [MP] [Chat] [ZBS] SKYLINE-R34 connected
+01:12:42.686 : [MP] [ZBS] SKYLINE-R34 connected, client_id = 19 
+01:12:45.943 : [MP] [Chat] [TCV]broly777xxx connected
+01:12:45.944 : [MP] [TCV]broly777xxx connected, client_id = 20 
+01:13:25.669 : [MP] [Chat] [ZBS] TRUJILLANO connected
+01:13:25.670 : [MP] [ZBS] TRUJILLANO connected, client_id = 21 
+01:14:37.808 : [MP] [Chat] [ZBS] TRUJILLANO disconnected
+01:14:37.809 : [MP] [ZBS] TRUJILLANO disconnected, client_id = 21 
+01:15:04.532 : [MP] State: running;  Time: 4504519;  Players: 9
+01:15:06.866 : [MP] [Chat] [TCS] JUANCA connected
+01:15:06.867 : [MP] [TCS] JUANCA connected, client_id = 22 
+01:15:07.550 : [MP] [Chat] [TCS] ANGEL connected
+01:15:07.551 : [MP] [TCS] ANGEL connected, client_id = 23 
+01:15:17.751 : Timestamp 3913499 (ms), reference timestamp 4517739 (ms)
+01:15:17.753 : Timestamp 3913499 (ms), reference timestamp 4517739 (ms)
+01:15:17.823 : [MP] [Chat] 🌸 Mad🌸 connected
+01:15:17.824 : [MP] 🌸 Mad🌸 connected, client_id = 24 
+01:15:37.112 : [MP] [Chat] zbuss con el green
+01:15:48.825 : [MP] [Chat] diego
+01:18:04.532 : [MP] State: running;  Time: 4684520;  Players: 12
+01:18:24.240 : Timestamp 3913499 (ms), reference timestamp 4704227 (ms)
+01:18:24.241 : Timestamp 3913499 (ms), reference timestamp 4704227 (ms)
+01:18:24.290 : [MP] [Chat] [ TCS ] SCORPIO connected
+01:18:24.290 : [MP] [ TCS ] SCORPIO connected, client_id = 25 
+01:18:45.496 : Timestamp 3913499 (ms), reference timestamp 4725483 (ms)
+01:18:45.496 : Timestamp 3913499 (ms), reference timestamp 4725483 (ms)
+01:18:45.562 : [MP] [Chat] [ZBS] Jota_Rutero connected
+01:18:45.562 : [MP] [ZBS] Jota_Rutero connected, client_id = 26 
+01:20:35.780 : [MP] [Chat] [ZBS] SKYLINE-R34 disconnected
+01:20:35.781 : [MP] [ZBS] SKYLINE-R34 disconnected, client_id = 19 
+01:21:04.536 : [MP] State: running;  Time: 4864524;  Players: 13
+01:22:18.242 : [MP] [Chat] [GM] PANDA disconnected
+01:22:18.243 : [MP] [GM] PANDA disconnected, client_id = 16 
+01:22:40.081 : Timestamp 3913499 (ms), reference timestamp 4960068 (ms)
+01:22:40.082 : Timestamp 3913499 (ms), reference timestamp 4960068 (ms)
+01:22:40.166 : [MP] [Chat] [TCS] Susan Alexandra connected
+01:22:40.166 : [MP] [TCS] Susan Alexandra connected, client_id = 27 
+01:22:55.200 : Timestamp 3913499 (ms), reference timestamp 4975187 (ms)
+01:22:55.201 : Timestamp 3913499 (ms), reference timestamp 4975187 (ms)
+01:22:55.267 : [MP] [Chat] [MLN]LIAM NEESON connected
+01:22:55.269 : [MP] [MLN]LIAM NEESON connected, client_id = 28 
+01:23:12.309 : [MP] [Chat] [JDT] Bless. disconnected
+01:23:12.310 : [MP] [JDT] Bless. disconnected, client_id = 15 
+01:23:21.949 : [MP] [Chat] @@qr_reac_002@@
+01:23:59.121 : [MP] [Chat] el usuario lobo se controla, sino me tiene que dar a la milechi a cambio
+01:24:04.537 : [MP] State: running;  Time: 5044524;  Players: 13
+01:24:08.789 : [MP] [Chat] c alex xdd
+01:24:35.663 : [MP] [Chat] a ver ese usuario scorpio se me cuadra a la izquierda
+01:24:49.003 : [MP] [Chat] Te amo Milechi
+01:25:29.564 : [MP] [Chat] huelga de ticllas en tarma
+01:26:19.744 : [MP] [Chat] goo
+01:26:28.029 : [MP] [Chat] tarma
+01:26:44.426 : [MP] [Chat] go tarma
+01:26:54.640 : [MP] [Chat] ya mi amor
+01:27:00.498 : [MP] [Chat] ya mi vida
+01:27:04.541 : [MP] State: running;  Time: 5224528;  Players: 13
+01:27:18.300 : Timestamp 3913499 (ms), reference timestamp 5238288 (ms)
+01:27:18.302 : Timestamp 3913499 (ms), reference timestamp 5238288 (ms)
+01:27:18.475 : [MP] [Chat] [ZBS] SKYLINE-R34 connected
+01:27:18.476 : [MP] [ZBS] SKYLINE-R34 connected, client_id = 29 
+01:27:55.001 : [MP] [Chat] [MLN]LIAM NEESON disconnected
+01:27:55.002 : [MP] [MLN]LIAM NEESON disconnected, client_id = 28 
+01:29:16.551 : [MP] [Chat] [APS] CHARLY:D disconnected
+01:29:16.551 : [MP] [APS] CHARLY:D disconnected, client_id = 17 
+01:29:43.811 : [MP] [Chat] go tarma
+01:30:04.543 : [MP] State: running;  Time: 5404530;  Players: 12
+01:31:19.481 : [MP] [Chat] [MLN]LIAM NEESON connected
+01:31:19.482 : [MP] [MLN]LIAM NEESON connected, client_id = 30 
+01:31:20.423 : [MP] [Chat] @@qr_dire_002@@
+01:31:51.209 : [MP] [Chat] aver usuario Nilver T.I cuadrese a la derecha y espereme en tanga
+01:31:59.818 : [MP] [Chat] @@qr_reac_001@@
+01:32:15.377 : [MP] [Chat] ¡Si!
+01:32:51.153 : [MP] [Chat] donde es la huelga
+01:32:57.906 : [MP] [Chat] [ITZA] ajidepioGG connected
+01:32:57.907 : [MP] [ITZA] ajidepioGG connected, client_id = 31 
+01:32:58.732 : [MP] [Chat] ¶ disconnected
+01:32:58.733 : [MP] ¶ disconnected, client_id = 14 
+01:33:04.543 : [MP] State: running;  Time: 5584531;  Players: 13
+01:33:08.215 : [MP] [Chat] [ITZA] ajidepioGG disconnected
+01:33:08.218 : [MP] [ITZA] ajidepioGG disconnected, client_id = 31 
+01:33:11.201 : [MP] [Chat] [IMP] ИΞИΞ MALO—͟͞͞★ connected
+01:33:11.201 : [MP] [IMP] ИΞИΞ MALO—͟͞͞★ connected, client_id = 32 
+01:34:11.500 : [MP] [Chat] hay lag en esa zona
+01:36:04.548 : [MP] State: running;  Time: 5764536;  Players: 13
+01:39:04.548 : [MP] State: running;  Time: 5944536;  Players: 13
+01:41:11.340 : [MP] [Chat] (TRM) Ricardo connected
+01:41:11.341 : [MP] (TRM) Ricardo connected, client_id = 33 
+01:42:04.552 : [MP] State: running;  Time: 6124540;  Players: 14
+01:42:12.257 : [MP] [Chat] @@qr_reac_001@@
+01:42:15.405 : [MP] [Chat] [APS] CHARLY:D connected
+01:42:15.406 : [MP] [APS] CHARLY:D connected, client_id = 34 
+01:45:04.557 : [MP] State: running;  Time: 6304544;  Players: 15
+01:45:33.042 : [MP] [Chat] ajidepioGG connected
+01:45:33.043 : [MP] ajidepioGG connected, client_id = 35 
+01:48:04.560 : [MP] State: running;  Time: 6484547;  Players: 16
+01:50:13.935 : [MP] [Chat] JAJAJAJAJAJJAJA
+01:50:42.924 : [MP] [Chat] 🌸 Mad🌸 disconnected
+01:50:42.925 : [MP] 🌸 Mad🌸 disconnected, client_id = 24 
+01:51:04.564 : [MP] State: running;  Time: 6664552;  Players: 15
+01:51:26.972 : [MP] [Chat] @@qr_reac_001@@
+01:51:40.562 : [MP] [Chat] @@qr_conv_005@@
+01:54:04.567 : [MP] State: running;  Time: 6844554;  Players: 15
+01:55:42.071 : [MP] [Chat] [ZBS] aXo disconnected
+01:55:42.072 : [MP] [ZBS] aXo disconnected, client_id = 12 
+01:57:04.570 : [MP] State: running;  Time: 7024557;  Players: 14
+02:00:01.515 : [MP] [Chat] @@qr_conv_005@@
+02:00:03.711 : [MP] [Chat] @@qr_conv_005@@
+02:00:04.574 : [MP] State: running;  Time: 7204562;  Players: 14
+02:00:15.771 : [MP] [Chat] [TCS] Susan Alexandra disconnected
+02:00:15.773 : [MP] [TCS] Susan Alexandra disconnected, client_id = 27 
+02:03:04.578 : [MP] State: running;  Time: 7384565;  Players: 13
+02:04:12.161 : [MP] [Chat] [TCS] Susan Alexandra connected
+02:04:12.163 : [MP] [TCS] Susan Alexandra connected, client_id = 36 
+02:04:21.175 : [MP] [Chat] alguin para hacer pique de camiones sin carga
+02:04:53.109 : [MP] [Chat] F
+02:05:41.667 : [MP] [Chat] nose se escucho escorpio
+02:05:55.223 : [MP] [Chat] xd
+02:06:04.581 : [MP] State: running;  Time: 7564568;  Players: 14
+02:09:04.585 : [MP] State: running;  Time: 7744573;  Players: 14
+02:12:04.590 : [MP] State: running;  Time: 7924577;  Players: 14
+02:12:23.530 : [MP] [Chat] [TCS] JUANCA disconnected
+02:12:23.531 : [MP] [TCS] JUANCA disconnected, client_id = 22 
+02:13:03.610 : [MP] [Chat] go pique?
+02:13:05.959 : [MP] [Chat] confirmen
+02:13:09.734 : [MP] [Chat] @@qr_reac_001@@
+02:13:19.660 : [MP] [Chat] @@qr_reac_001@@
+02:13:50.645 : [MP] [Chat] cambiare a camion
+02:14:17.964 : [MP] [Chat] [TCS] ANGEL disconnected
+02:14:17.966 : [MP] [TCS] ANGEL disconnected, client_id = 23 
+02:15:04.591 : [MP] State: running;  Time: 8104578;  Players: 12
+02:17:22.811 : [MP] [Chat] quien puede poner de dia
+02:17:57.845 : [MP] [Chat] [TCS] Susan Alexandra disconnected
+02:17:57.846 : [MP] [TCS] Susan Alexandra disconnected, client_id = 36 
+02:18:04.596 : [MP] State: running;  Time: 8284583;  Players: 11
+02:18:25.272 : [MP] [Chat] [ZBS] CHINO connected
+02:18:25.273 : [MP] [ZBS] CHINO connected, client_id = 37 
+02:21:04.599 : [MP] State: running;  Time: 8464587;  Players: 12
+02:21:11.622 : [MP] [Chat] chicos otra ruta ?
+02:22:15.055 : [MP] [Chat] oe chino mongol
+02:22:17.755 : [MP] [Chat] 【MLN】MILECHI ★ connected
+02:22:17.756 : [MP] 【MLN】MILECHI ★ connected, client_id = 38 
+02:22:22.803 : [MP] [Chat] deja rutear fracasaooo
+02:22:23.655 : [MP] [Chat] HHH
+02:22:47.602 : [MP] [Chat] 1acuerdate de ese nick
+02:22:51.127 : [MP] [Chat] richi
+02:23:18.684 : [MP] [Chat] chino te la tenemos jurada , fracasaaooo
+02:23:53.746 : [MP] [Chat] [ZBS] CHINO disconnected
+02:23:53.747 : [MP] [ZBS] CHINO disconnected, client_id = 37 
+02:24:04.600 : [MP] State: running;  Time: 8644588;  Players: 12
+02:25:37.981 : [MP] [Chat] Nilver T.I connected
+02:25:37.982 : [MP] Nilver T.I connected, client_id = 39 
+02:26:34.819 : [MP] [Chat] [ZBS] CHINO connected
+02:26:34.820 : [MP] [ZBS] CHINO connected, client_id = 40 
+02:26:46.305 : [MP] [Chat] /g_set_time 09
+02:27:01.370 : [MP] [Chat] -
+02:27:02.002 : [MP] [Chat] -
+02:27:02.554 : [MP] [Chat] -
+02:27:02.960 : [MP] [Chat] -
+02:27:03.347 : [MP] [Chat] -
+02:27:03.710 : [MP] [Chat] -
+02:27:04.037 : [MP] [Chat] -
+02:27:04.335 : [MP] [Chat] -
+02:27:04.604 : [MP] State: running;  Time: 8824591;  Players: 14
+02:27:04.610 : [MP] [Chat] -
+02:27:04.882 : [MP] [Chat] -
+02:27:05.148 : [MP] [Chat] -
+02:27:05.433 : [MP] [Chat] -
+02:27:05.678 : [MP] [Chat] -
+02:27:05.943 : [MP] [Chat] -
+02:27:06.208 : [MP] [Chat] -
+02:27:08.832 : [MP] [Chat] -
+02:28:33.959 : [MP] [Chat] señor policia haga algo
+02:28:38.977 : [MP] [Chat] estan que me acosen
+02:29:02.434 : [MP] [Chat] @@qr_reac_001@@
+02:29:05.751 : [MP] [Chat] se me fue el mause
+02:29:38.916 : [MP] [Chat] xd
+02:30:04.604 : [MP] State: running;  Time: 9004591;  Players: 14
+02:30:32.863 : [MP] [Chat] hay lag en esa zona
+02:30:41.644 : [MP] [Chat] @@qr_reac_001@@
+02:31:49.954 : [MP] [Chat] @@qr_reac_001@@
+02:33:04.607 : [MP] State: running;  Time: 9184594;  Players: 14
+02:33:15.733 : [MP] [Chat] jajaajja
+02:33:22.675 : [MP] [Chat] xd
+02:33:55.537 : [MP] [Chat] Nilver T.I disconnected
+02:33:55.538 : [MP] Nilver T.I disconnected, client_id = 39 
+02:33:57.639 : [MP] [Chat] [ČĐŞ] iiJeanX connected
+02:33:57.646 : [MP] [ČĐŞ] iiJeanX connected, client_id = 41 
+02:34:01.458 : [MP] [Chat] esa manioneta no pesa nada
+02:34:06.199 : [MP] [Chat] QUE TAL LAGARTIJAS
+02:34:07.281 : [MP] [Chat] jajjajajajajjajajajja
+02:34:12.575 : [MP] [Chat] ENTRO CON EL MOD DE RETRO?
+02:34:30.726 : [MP] [Chat] Oe charly para entrar con tu skin p
+02:34:34.540 : [MP] [Chat] permiso
+02:34:58.057 : [MP] [Chat] [ČĐŞ] iiJeanX disconnected
+02:34:58.060 : [MP] [ČĐŞ] iiJeanX disconnected, client_id = 41 
+02:35:26.192 : [MP] [Chat] ¶ connected
+02:35:26.193 : [MP] ¶ connected, client_id = 42 
+02:36:04.610 : [MP] State: running;  Time: 9364598;  Players: 14
+02:36:55.561 : [MP] [Chat] recuncha
+02:37:31.351 : [MP] [Chat] Se te da la bienvenida.
+02:38:26.835 : [MP] [Chat] aca si me puedes decir payaso c... xd
+02:38:29.042 : [MP] [Chat] [ZBS] CHINO disconnected
+02:38:29.043 : [MP] [ZBS] CHINO disconnected, client_id = 40 
+02:39:04.615 : [MP] State: running;  Time: 9544602;  Players: 13
+02:39:19.854 : [MP] [Chat] payaso?
+02:39:22.888 : [MP] [Chat] xd
+02:39:28.622 : [MP] [Chat] si amor
+02:39:32.293 : [MP] [Chat] calla cunchatum
+02:39:36.633 : [MP] [Chat] es una refencia
+02:39:43.024 : [MP] [Chat] pon de dia porfavor
+02:39:54.597 : [MP] [Chat] no tengo mod, soy de temu
+02:40:18.708 : [MP] [Chat] el dia de mañana si tengo mod miamol
+02:40:23.179 : [MP] [Chat] como tu pc de temu
+02:40:37.320 : [MP] [Chat] squen ticket ya?
+02:40:43.796 : [MP] [Chat] ya chupala
+02:40:56.547 : [MP] [Chat] ya mi amor
+02:41:07.892 : [MP] [Chat] 【MLN】MILECHI ★ disconnected
+02:41:07.894 : [MP] 【MLN】MILECHI ★ disconnected, client_id = 38 
+02:41:16.528 : [MP] [Chat] se fue mi mujer
+02:42:04.619 : [MP] State: running;  Time: 9724607;  Players: 12
+02:42:50.200 : [MP] [Chat] XD
+02:42:55.704 : [MP] [Chat] calla mongol
+02:42:58.817 : [MP] [Chat] AEA
+02:44:12.179 : [MP] [Chat] XD
+02:44:18.462 : [MP] [Chat] deja de toclar claspson oe especial
+02:44:27.696 : [MP] [Chat] [ZBS] CHINO connected
+02:44:27.698 : [MP] [ZBS] CHINO connected, client_id = 43 
+02:44:49.348 : [MP] [Chat] tmre
+02:44:57.313 : [MP] [Chat] [ČĐŞ] iiJeanX connected
+02:44:57.315 : [MP] [ČĐŞ] iiJeanX connected, client_id = 44 
+02:45:04.621 : [MP] State: running;  Time: 9904609;  Players: 14
+02:45:39.515 : [MP] [Chat] @@qr_reac_001@@
+02:45:53.628 : [MP] [Chat] tu abuelo kbro
+02:46:09.912 : [MP] [Chat] pero tu prima es kbrazo y asi te la kchas
+02:46:13.706 : [MP] [Chat] silencio nadie quiere escuchar esos sonidos
+02:46:25.236 : [MP] [Chat] @@qr_reac_001@@
+02:46:36.036 : [MP] [Chat] somos empresa CHALY :3
+02:46:48.741 : [MP] [Chat] xd
+02:48:04.622 : [MP] State: running;  Time: 10084609;  Players: 14
+02:48:08.519 : [MP] [Chat] Habla SCORPIO pa ponerme skin de Ticllas
+02:48:10.952 : [MP] [Chat] permiso p
+02:48:13.898 : [MP] [Chat] [ZBS] CHINO disconnected
+02:48:13.899 : [MP] [ZBS] CHINO disconnected, client_id = 43 
+02:48:20.997 : [MP] [Chat] calla huevon
+02:48:24.272 : [MP] [Chat] si o no
+02:48:25.560 : [MP] [Chat] csmr
+02:48:29.277 : [MP] [Chat] qda
+02:48:32.949 : [MP] [Chat] [ČĐŞ] iiJeanX disconnected
+02:48:32.950 : [MP] [ČĐŞ] iiJeanX disconnected, client_id = 44 
+02:48:41.317 : [MP] [Chat] ajidepioGG disconnected
+02:48:41.319 : [MP] ajidepioGG disconnected, client_id = 35 
+02:50:23.116 : [MP] [Chat] [ČĐŞ] iiJeanX connected
+02:50:23.119 : [MP] [ČĐŞ] iiJeanX connected, client_id = 45 
+02:50:32.784 : [MP] [Chat] cambia la skn a la roja on xd
+02:50:43.184 : [MP] [Chat] [JDT] Bless. connected
+02:50:43.185 : [MP] [JDT] Bless. connected, client_id = 46 
+02:50:50.824 : [MP] [Chat] [CIAL] DeYtroN disconnected
+02:50:50.826 : [MP] [CIAL] DeYtroN disconnected, client_id = 18 
+02:51:04.622 : [MP] State: running;  Time: 10264610;  Players: 12
+02:51:15.464 : [MP] [Chat] q tal va? se siente lag o algo?
+02:51:32.807 : [MP] [Chat] pon las 6 AM
+02:51:40.039 : [MP] [Chat] no se puede xd
+02:51:43.141 : [MP] [Chat] todos los dias juego de noche tmre
+02:51:47.115 : [MP] [Chat] pon noma
+02:51:51.331 : [MP] [Chat] quien creo la sala
+02:51:53.715 : [MP] [Chat] el queponga
+02:51:56.205 : [MP] [Chat] es servidor dedicado, no es creado de sala tmr
+02:52:06.704 : [MP] [Chat] servidor fisico dedicado
+02:52:10.579 : [MP] [Chat] a chuta
+02:52:13.502 : [MP] [Chat] fue p
+02:52:18.691 : [MP] [Chat] siempre de noche csmr
+02:52:32.920 : [MP] [Chat] quiero rutear con mi nueva empresa
+02:52:54.702 : [MP] [Chat] [JDT] Bless. disconnected
+02:52:54.703 : [MP] [JDT] Bless. disconnected, client_id = 46 
+02:53:20.096 : [MP] [Chat] xd.
+02:53:42.049 : [MP] [Chat] milechiiiii
+02:54:04.625 : [MP] State: running;  Time: 10444612;  Players: 11
+02:55:46.641 : [MP] [Chat] [IMP] ИΞИΞ MALO—͟͞͞★ disconnected
+02:55:46.642 : [MP] [IMP] ИΞИΞ MALO—͟͞͞★ disconnected, client_id = 32 
+02:57:04.629 : [MP] State: running;  Time: 10624616;  Players: 10
+03:00:03.679 : [MP] [Chat] [ZBS] Jota_Rutero disconnected
+03:00:03.681 : [MP] [ZBS] Jota_Rutero disconnected, client_id = 26 
+03:00:04.633 : [MP] State: running;  Time: 10804620;  Players: 9
+03:02:38.594 : [MP] [Chat] [APS] CHARLY:D disconnected
+03:02:38.595 : [MP] [APS] CHARLY:D disconnected, client_id = 34 
+03:03:04.633 : [MP] State: running;  Time: 10984620;  Players: 8
+03:03:26.677 : [MP] [Chat] [ČĐŞ] iiJeanX disconnected
+03:03:26.678 : [MP] [ČĐŞ] iiJeanX disconnected, client_id = 45 
+03:04:26.667 : [MP] [Chat] ¶ disconnected
+03:04:26.668 : [MP] ¶ disconnected, client_id = 42 
+03:05:51.854 : [MP] [Chat] [ZBS] iiJeanX connected
+03:05:51.856 : [MP] [ZBS] iiJeanX connected, client_id = 47 
+03:06:04.634 : [MP] State: running;  Time: 11164622;  Players: 7
+03:06:04.707 : [MP] [Chat] YA TENGO EL MISMO TAG, NO ME PUEDES DECIR NADA MRDA
+03:09:04.638 : [MP] State: running;  Time: 11344626;  Players: 7
+03:12:04.639 : [MP] State: running;  Time: 11524627;  Players: 7
+03:13:15.138 : [MP] [Chat] bonito neblinero
+03:13:23.916 : [MP] [Chat] @@qr_comp_001@@
+03:13:32.440 : [MP] [Chat] ahh wa entretar eta ruta, me aburri de este mapa xd
+03:15:04.640 : [MP] State: running;  Time: 11704627;  Players: 7
+03:15:40.657 : [MP] [Chat] scorpio
+03:15:52.946 : [MP] [Chat] carrera a la oroya ?
+03:16:45.854 : [MP] [Chat] [ TCS ] SCORPIO disconnected
+03:16:45.856 : [MP] [ TCS ] SCORPIO disconnected, client_id = 25 
+03:17:05.519 : [MP] [Chat] [TCV]broly777xxx disconnected
+03:17:05.521 : [MP] [TCV]broly777xxx disconnected, client_id = 20 
+03:18:04.641 : [MP] State: running;  Time: 11884629;  Players: 5
+03:20:13.516 : [MP] [Chat] [TRM] Capybara disconnected
+03:20:13.517 : [MP] [TRM] Capybara disconnected, client_id = 13 
+03:21:04.644 : [MP] State: running;  Time: 12064632;  Players: 4
+03:24:04.649 : [MP] State: running;  Time: 12244636;  Players: 4
+03:24:34.960 : [MP] [Chat] [ZBS] iiJeanX disconnected
+03:24:34.962 : [MP] [ZBS] iiJeanX disconnected, client_id = 47 
+03:27:04.651 : [MP] State: running;  Time: 12424639;  Players: 3
+03:30:04.655 : [MP] State: running;  Time: 12604643;  Players: 3
+03:30:12.701 : [MP] [Chat] (TRM) Ricardo disconnected
+03:30:12.702 : [MP] (TRM) Ricardo disconnected, client_id = 33 
+03:33:04.657 : [MP] State: running;  Time: 12784645;  Players: 2
+03:36:04.659 : [MP] State: running;  Time: 12964646;  Players: 2
+03:39:04.659 : [MP] State: running;  Time: 13144646;  Players: 2
+03:42:04.661 : [MP] State: running;  Time: 13324648;  Players: 2
+03:45:04.664 : [MP] State: running;  Time: 13504652;  Players: 2
+03:48:04.668 : [MP] State: running;  Time: 13684656;  Players: 2
+03:51:04.673 : [MP] State: running;  Time: 13864660;  Players: 2
+03:54:04.677 : [MP] State: running;  Time: 14044664;  Players: 2
+03:57:04.680 : [MP] State: running;  Time: 14224667;  Players: 2
+03:58:41.331 : [MP] [Chat] [MLN]LIAM NEESON disconnected
+03:58:41.333 : [MP] [MLN]LIAM NEESON disconnected, client_id = 30 
+04:00:04.683 : [MP] State: running;  Time: 14404671;  Players: 1
+04:03:04.688 : [MP] State: running;  Time: 14584675;  Players: 1
+04:06:04.690 : [MP] State: running;  Time: 14764677;  Players: 1
+04:09:04.694 : [MP] State: running;  Time: 14944682;  Players: 1
+04:12:04.694 : [MP] State: running;  Time: 15124682;  Players: 1
+04:15:04.695 : [MP] State: running;  Time: 15304682;  Players: 1
+04:18:04.700 : [MP] State: running;  Time: 15484687;  Players: 1
+04:21:04.703 : [MP] State: running;  Time: 15664691;  Players: 1
+04:24:04.705 : [MP] State: running;  Time: 15844692;  Players: 1
+04:27:04.708 : [MP] State: running;  Time: 16024696;  Players: 1
+04:30:04.711 : [MP] State: running;  Time: 16204699;  Players: 1
+04:33:04.713 : [MP] State: running;  Time: 16384701;  Players: 1
+04:36:04.714 : [MP] State: running;  Time: 16564702;  Players: 1
+04:39:04.715 : [MP] State: running;  Time: 16744702;  Players: 1
+04:42:04.718 : [MP] State: running;  Time: 16924705;  Players: 1
+04:45:04.719 : [MP] State: running;  Time: 17104706;  Players: 1
+04:48:04.723 : [MP] State: running;  Time: 17284710;  Players: 1
+04:51:04.726 : [MP] State: running;  Time: 17464713;  Players: 1
+04:51:33.152 : [MP] [Chat] [ZBS] SKYLINE-R34 disconnected
+04:51:33.153 : [MP] [ZBS] SKYLINE-R34 disconnected, client_id = 29 
+04:54:04.727 : [MP] State: running;  Time: 17644714;  Players: 0
+04:57:04.730 : [MP] State: running;  Time: 17824717;  Players: 0
+05:00:04.733 : [MP] State: running;  Time: 18004720;  Players: 0
+05:03:04.734 : [MP] State: running;  Time: 18184721;  Players: 0
+05:06:04.736 : [MP] State: running;  Time: 18364724;  Players: 0
+05:09:04.741 : [MP] State: running;  Time: 18544728;  Players: 0
+05:12:04.745 : [MP] State: running;  Time: 18724733;  Players: 0
+05:15:04.749 : [MP] State: running;  Time: 18904737;  Players: 0
+05:18:04.754 : [MP] State: running;  Time: 19084742;  Players: 0
+05:21:04.756 : [MP] State: running;  Time: 19264743;  Players: 0
+05:24:04.756 : [MP] State: running;  Time: 19444744;  Players: 0
+05:27:04.761 : [MP] State: running;  Time: 19624748;  Players: 0
+05:30:04.762 : [MP] State: running;  Time: 19804750;  Players: 0
+05:33:04.767 : [MP] State: running;  Time: 19984755;  Players: 0
+05:36:04.771 : [MP] State: running;  Time: 20164759;  Players: 0
+05:39:04.774 : [MP] State: running;  Time: 20344762;  Players: 0
+05:42:04.776 : [MP] State: running;  Time: 20524763;  Players: 0
+05:45:04.780 : [MP] State: running;  Time: 20704768;  Players: 0
+05:48:04.780 : [MP] State: running;  Time: 20884768;  Players: 0
+05:51:04.784 : [MP] State: running;  Time: 21064772;  Players: 0
+05:54:04.786 : [MP] State: running;  Time: 21244773;  Players: 0
+05:57:04.790 : [MP] State: running;  Time: 21424777;  Players: 0
+06:00:04.795 : [MP] State: running;  Time: 21604782;  Players: 0
+06:03:04.796 : [MP] State: running;  Time: 21784783;  Players: 0
+06:06:04.796 : [MP] State: running;  Time: 21964784;  Players: 0
+06:09:04.799 : [MP] State: running;  Time: 22144787;  Players: 0
+06:12:04.805 : [MP] State: running;  Time: 22324792;  Players: 0
+06:15:04.808 : [MP] State: running;  Time: 22504795;  Players: 0
+06:18:04.812 : [MP] State: running;  Time: 22684799;  Players: 0
+06:21:04.816 : [MP] State: running;  Time: 22864804;  Players: 0
+06:24:04.817 : [MP] State: running;  Time: 23044805;  Players: 0
+06:27:04.817 : [MP] State: running;  Time: 23224805;  Players: 0
+06:30:04.818 : [MP] State: running;  Time: 23404806;  Players: 0
+06:33:04.821 : [MP] State: running;  Time: 23584808;  Players: 0
+06:36:04.823 : [MP] State: running;  Time: 23764810;  Players: 0
+06:39:04.826 : [MP] State: running;  Time: 23944813;  Players: 0
+06:42:04.827 : [MP] State: running;  Time: 24124814;  Players: 0
+06:45:04.827 : [MP] State: running;  Time: 24304814;  Players: 0
+06:48:04.829 : [MP] State: running;  Time: 24484816;  Players: 0
+06:51:04.830 : [MP] State: running;  Time: 24664817;  Players: 0
+06:54:04.830 : [MP] State: running;  Time: 24844818;  Players: 0
+06:57:04.834 : [MP] State: running;  Time: 25024822;  Players: 0
+07:00:04.835 : [MP] State: running;  Time: 25204822;  Players: 0
+07:03:04.839 : [MP] State: running;  Time: 25384826;  Players: 0
+07:06:04.840 : [MP] State: running;  Time: 25564828;  Players: 0
+07:09:04.842 : [MP] State: running;  Time: 25744830;  Players: 0
+07:12:04.844 : [MP] State: running;  Time: 25924832;  Players: 0
+07:15:04.849 : [MP] State: running;  Time: 26104837;  Players: 0
+07:18:04.850 : [MP] State: running;  Time: 26284838;  Players: 0
+07:21:04.855 : [MP] State: running;  Time: 26464843;  Players: 0
+07:24:04.858 : [MP] State: running;  Time: 26644846;  Players: 0
+07:27:04.860 : [MP] State: running;  Time: 26824847;  Players: 0
+07:30:04.862 : [MP] State: running;  Time: 27004850;  Players: 0
+07:33:04.864 : [MP] State: running;  Time: 27184851;  Players: 0
+07:36:04.868 : [MP] State: running;  Time: 27364856;  Players: 0
+07:39:04.871 : [MP] State: running;  Time: 27544859;  Players: 0
+07:42:04.872 : [MP] State: running;  Time: 27724860;  Players: 0
+07:45:04.872 : [MP] State: running;  Time: 27904860;  Players: 0
+07:48:04.873 : [MP] State: running;  Time: 28084860;  Players: 0
+07:51:04.876 : [MP] State: running;  Time: 28264864;  Players: 0
+07:54:04.879 : [MP] State: running;  Time: 28444866;  Players: 0
+07:57:04.879 : [MP] State: running;  Time: 28624867;  Players: 0
+08:00:04.882 : [MP] State: running;  Time: 28804869;  Players: 0
+08:03:04.885 : [MP] State: running;  Time: 28984872;  Players: 0
+08:06:04.886 : [MP] State: running;  Time: 29164874;  Players: 0
+08:09:04.889 : [MP] State: running;  Time: 29344876;  Players: 0

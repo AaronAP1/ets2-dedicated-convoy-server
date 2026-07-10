@@ -16,7 +16,7 @@ WORKDIR /app
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
-    && apt-get install -y python3 libatomic1 libx11-6 \
+    && apt-get install -y libatomic1 libx11-6 \
     && apt-get clean
 
 # Create required dirs
@@ -24,9 +24,6 @@ RUN mkdir -p "${SAVEGAME_LOCATION}" \
     && chown steam:steam -R "${SAVEGAME_LOCATION}" \
     && mkdir -p /default_packages
 
-COPY ets_server_entrypoint.py /ets_server_entrypoint.py
-COPY active_users_api.py /active_users_api.py
-COPY status_reporter.py /status_reporter.py
 COPY entrypoint.sh /entrypoint
 COPY VERSION /version
 RUN chmod +x /entrypoint
@@ -36,5 +33,5 @@ COPY ["${DEFAULT_PACKAGES}/server_packages.sii", "/default_packages/"]
 
 USER steam
 
-ENTRYPOINT [ "/entrypoint" ]
+ENTRYPOINT [ "/bin/sh", "/entrypoint" ]
 CMD [ "bash", "-c", "${EXECUTABLE}" ]

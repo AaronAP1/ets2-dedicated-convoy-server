@@ -1,20 +1,17 @@
 #!/bin/sh
 
-# Copy default server_packages if they do not exist
+# Copy the bundled server package files into the save-data folder on first start.
 cp -n /default_packages/server_packages.sii "${SAVEGAME_LOCATION}"
 cp -n /default_packages/server_packages.dat "${SAVEGAME_LOCATION}"
 
-# Generate config and update server
-/usr/bin/python3 /ets_server_entrypoint.py
-
-if [ "${ETS_STATUS_API_ENABLED:-true}" = "true" ]; then
-	echo "[INFO]: Starting active users API..."
-	/usr/bin/python3 /active_users_api.py &
-fi
-
-if [ "${ETS_STATUS_PUSH_ENABLED:-false}" = "true" ]; then
-	echo "[INFO]: Starting status push reporter..."
-	/usr/bin/python3 /status_reporter.py &
+if [ "${ETS_SERVER_UPDATE_ON_START:-true}" = "true" ] || [ ! -x "${EXECUTABLE}" ]; then
+	echo "[INFO]: Updating ETS Server..."
+	beta_argument=""
+	if [ -n "${ETS_SERVER_BRANCH}" ]; then
+		beta_argument=" -beta ${ETS_SERVER_BRANCH}"
+	fi
+	/home/steam/steamcmd/steamcmd.sh +force_install_dir /app +login anonymous +app_update "${APP_ID}"${beta_argument} +quit
+	echo "[INFO]: Update done."
 fi
 
 echo "[INFO]: Starting server..."

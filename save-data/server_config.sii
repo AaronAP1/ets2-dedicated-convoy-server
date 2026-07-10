@@ -1,9 +1,9 @@
 SiiNunit
 {
-server_config : _nameless.3ecf.fab0 {
- lobby_name: "AndesMP Server"
- description: "AndesMP Server"
- welcome_message: "Bienvenido a AndesMP!"
+server_config : _nameless.3f5a.0340 {
+ lobby_name: "PERU IM"
+ description: "IMPeru Server"
+ welcome_message: "Bienvenido a IMPeru!"
  password: ""
  max_players: 128
  max_vehicles_total: 100
@@ -13,7 +13,7 @@ server_config : _nameless.3ecf.fab0 {
  query_virtual_port: 101
  connection_dedicated_port: 27015
  query_dedicated_port: 27016
- server_logon_token: 5E3ABAC842AEC2EF8128CFD4A0F18542
+ server_logon_token: ""
  player_damage: true
  traffic: true
  hide_in_company: false
