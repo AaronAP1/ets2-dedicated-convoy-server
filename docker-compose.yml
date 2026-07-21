@@ -59,7 +59,7 @@ services:
       - "MONITOR_SERVER_NAME=NCS SERVER"
       # Token opcional para proteger el endpoint (vacío = abierto).
       # Si lo pones, consulta con: -H "Authorization: Bearer <token>"
-      - "MONITOR_TOKEN="
+      - "MONITOR_TOKEN=ncs-peru-monitor-7b3f9a1c8e2d4056"
       # Webhook de Discord para avisos de conexión/desconexión (vacío = desactivado).
       - "DISCORD_WEBHOOK_URL="
 

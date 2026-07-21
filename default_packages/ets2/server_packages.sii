@@ -1,31 +1,33 @@
 SiiNunit
 {
-server_packages_info : _nameless.164.12de.e5b8 {
+server_packages_info : _nameless.1ff.4b35.8998 {
  version: 1
  dlc_essential_list: 0
- dlc_non_essential_list: 8
+ dlc_non_essential_list: 10
  dlc_non_essential_list[0]: 2583912098162477
  dlc_non_essential_list[1]: 5557801920893741
  dlc_non_essential_list[2]: 92094914797
  dlc_non_essential_list[3]: 92649725589
  dlc_non_essential_list[4]: 59316381
- dlc_non_essential_list[5]: 50085130457797
- dlc_non_essential_list[6]: 63651269
- dlc_non_essential_list[7]: 2152080662829
+ dlc_non_essential_list[5]: 66750696595669
+ dlc_non_essential_list[6]: 50085130457797
+ dlc_non_essential_list[7]: 63651269
+ dlc_non_essential_list[8]: 2152080662829
+ dlc_non_essential_list[9]: 58739619063725
  mod_list: 5
- mod_list[0]: _nameless.163.ff24.1e38
- mod_list[1]: _nameless.163.ff24.2f38
- mod_list[2]: _nameless.163.ff24.1bb8
- mod_list[3]: _nameless.163.ff24.2338
- mod_list[4]: _nameless.163.ff24.2838
+ mod_list[0]: _nameless.1ff.4d0b.7ad8
+ mod_list[1]: _nameless.1ff.4d0b.8058
+ mod_list[2]: _nameless.1ff.4d0b.86d8
+ mod_list[3]: _nameless.1ff.4d0b.8f58
+ mod_list[4]: _nameless.1ff.4d0b.7cd8
  map_name: "/map/ncs.mbd"
  map_dimensions: (-60416000, -49152000, 6144000, -12288000)
  roads_data_file_name: "/home/server_packages.dat"
- time_stamp: 1784603185
+ time_stamp: 1784662666
  time_compression: 3.785000
 }
 
-server_mod_detail : _nameless.163.ff24.1e38 {
+server_mod_detail : _nameless.1ff.4d0b.7ad8 {
  package_name: "Base 1 NCS Server"
  mod_name: "BASE 1 NCS Servidor"
  checksum: 2239261272853266589
@@ -35,7 +37,7 @@ server_mod_detail : _nameless.163.ff24.1e38 {
  full_name: true
 }
 
-server_mod_detail : _nameless.163.ff24.2f38 {
+server_mod_detail : _nameless.1ff.4d0b.8058 {
  package_name: "Base 2 NCS Server"
  mod_name: "BASE 2 NCS Servidor"
  checksum: 11930435282859349864
@@ -45,17 +47,17 @@ server_mod_detail : _nameless.163.ff24.2f38 {
  full_name: true
 }
 
-server_mod_detail : _nameless.163.ff24.1bb8 {
+server_mod_detail : _nameless.1ff.4d0b.86d8 {
  package_name: "Activador NCS Server"
  mod_name: "Activador NCS Server"
- checksum: 15364929494556119894
+ checksum: 5047432770059427251
  mod_id: 12381766973970052062
  workshop_mod: false
  optional_mod: true
  full_name: true
 }
 
-server_mod_detail : _nameless.163.ff24.2338 {
+server_mod_detail : _nameless.1ff.4d0b.8f58 {
  package_name: "Buses NCS Server"
  mod_name: "Buses NCS Server"
  checksum: 12668901655344813102
@@ -65,7 +67,7 @@ server_mod_detail : _nameless.163.ff24.2338 {
  full_name: true
 }
 
-server_mod_detail : _nameless.163.ff24.2838 {
+server_mod_detail : _nameless.1ff.4d0b.7cd8 {
  package_name: "Mod Pasajero NCS Server"
  mod_name: "Mod Pasajero NCS Server"
  checksum: 3783797358424257405
