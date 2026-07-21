@@ -1,110 +1,75 @@
 SiiNunit
 {
-server_packages_info : _nameless.1e3.17e8.8628 {
+server_packages_info : _nameless.164.12de.e5b8 {
  version: 1
  dlc_essential_list: 0
- dlc_non_essential_list: 10
+ dlc_non_essential_list: 8
  dlc_non_essential_list[0]: 2583912098162477
  dlc_non_essential_list[1]: 5557801920893741
  dlc_non_essential_list[2]: 92094914797
  dlc_non_essential_list[3]: 92649725589
  dlc_non_essential_list[4]: 59316381
- dlc_non_essential_list[5]: 66750696595669
- dlc_non_essential_list[6]: 50085130457797
- dlc_non_essential_list[7]: 63651269
- dlc_non_essential_list[8]: 2152080662829
- dlc_non_essential_list[9]: 58739619063725
- mod_list: 8
- mod_list[0]: _nameless.1e2.c183.f698
- mod_list[1]: _nameless.1e2.c184.0d18
- mod_list[2]: _nameless.1e2.c184.0598
- mod_list[3]: _nameless.1e2.c184.0218
- mod_list[4]: _nameless.1e2.c184.0518
- mod_list[5]: _nameless.1e2.c184.0898
- mod_list[6]: _nameless.1e2.c183.f798
- mod_list[7]: _nameless.1e2.c184.0d98
+ dlc_non_essential_list[5]: 50085130457797
+ dlc_non_essential_list[6]: 63651269
+ dlc_non_essential_list[7]: 2152080662829
+ mod_list: 5
+ mod_list[0]: _nameless.163.ff24.1e38
+ mod_list[1]: _nameless.163.ff24.2f38
+ mod_list[2]: _nameless.163.ff24.1bb8
+ mod_list[3]: _nameless.163.ff24.2338
+ mod_list[4]: _nameless.163.ff24.2838
  map_name: "/map/ncs.mbd"
  map_dimensions: (-60416000, -49152000, 6144000, -12288000)
  roads_data_file_name: "/home/server_packages.dat"
- time_stamp: 1783977026
- time_compression: 4.785000
+ time_stamp: 1784603185
+ time_compression: 3.785000
 }
 
-server_mod_detail : _nameless.1e2.c183.f698 {
- package_name: "Base NCS"
- mod_name: BASE
- checksum: 5790499710644169209
- mod_id: 7737278177960908974
+server_mod_detail : _nameless.163.ff24.1e38 {
+ package_name: "Base 1 NCS Server"
+ mod_name: "BASE 1 NCS Servidor"
+ checksum: 2239261272853266589
+ mod_id: 6507824569972556138
  workshop_mod: false
  optional_mod: true
  full_name: true
 }
 
-server_mod_detail : _nameless.1e2.c184.0d18 {
- package_name: Model_1_NCS
- mod_name: "\x09Model 1"
- checksum: 13331122848585573166
- mod_id: 3962524165718617997
+server_mod_detail : _nameless.163.ff24.2f38 {
+ package_name: "Base 2 NCS Server"
+ mod_name: "BASE 2 NCS Servidor"
+ checksum: 11930435282859349864
+ mod_id: 9738656545871738159
  workshop_mod: false
  optional_mod: true
  full_name: true
 }
 
-server_mod_detail : _nameless.1e2.c184.0598 {
- package_name: Psv1
- mod_name: "PSV 1"
- checksum: 4645389235241182237
- mod_id: 1622041693325475302
+server_mod_detail : _nameless.163.ff24.1bb8 {
+ package_name: "Activador NCS Server"
+ mod_name: "Activador NCS Server"
+ checksum: 15364929494556119894
+ mod_id: 12381766973970052062
  workshop_mod: false
  optional_mod: true
  full_name: true
 }
 
-server_mod_detail : _nameless.1e2.c184.0218 {
- package_name: Psv2
- mod_name: "PSV 2"
- checksum: 5119352405746716033
- mod_id: 5513906602772529393
+server_mod_detail : _nameless.163.ff24.2338 {
+ package_name: "Buses NCS Server"
+ mod_name: "Buses NCS Server"
+ checksum: 12668901655344813102
+ mod_id: 3912845088529943167
  workshop_mod: false
  optional_mod: true
  full_name: true
 }
 
-server_mod_detail : _nameless.1e2.c184.0518 {
- package_name: Psv3
- mod_name: "PSV 3"
- checksum: 5829203099536395157
- mod_id: 7976145500516215773
- workshop_mod: false
- optional_mod: true
- full_name: true
-}
-
-server_mod_detail : _nameless.1e2.c184.0898 {
- package_name: "mod_workshop_package.00000000DDD3513C"
- mod_name: "Peru Server MP \xe3\x80\x90PSV\xe3\x80\x91"
- checksum: 17993061426238805532
- mod_id: 3721613628
- workshop_mod: true
- optional_mod: true
- full_name: true
-}
-
-server_mod_detail : _nameless.1e2.c183.f798 {
- package_name: Psv4
- mod_name: "PSV 4"
- checksum: 12372478950879799638
- mod_id: 14875706028921864717
- workshop_mod: false
- optional_mod: true
- full_name: true
-}
-
-server_mod_detail : _nameless.1e2.c184.0d98 {
- package_name: Activador
- mod_name: Actualizador
- checksum: 16199097331844991076
- mod_id: 5142001509691198050
+server_mod_detail : _nameless.163.ff24.2838 {
+ package_name: "Mod Pasajero NCS Server"
+ mod_name: "Mod Pasajero NCS Server"
+ checksum: 3783797358424257405
+ mod_id: 17111011326132218467
  workshop_mod: false
  optional_mod: false
  full_name: true
