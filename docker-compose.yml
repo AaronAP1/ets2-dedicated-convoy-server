@@ -9,6 +9,7 @@ services:
     container_name: ets2-server
     restart: unless-stopped
     tty: true
+    stdin_open: true # necesario para poder enviar comandos a la consola (ej: g_set_time)
     network_mode: host # important to make game appear in server list
     # if you want to join via direct join token (displayed in logs on startup) you can use port mapping
     # the game will not appear in server list because the server can't determine the external IP
