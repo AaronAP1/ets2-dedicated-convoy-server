@@ -350,6 +350,19 @@ class Handler(BaseHTTPRequestHandler):
         return
 
 
+class QuietHTTPServer(ThreadingHTTPServer):
+    """HTTP server that ignores benign client disconnects (internet scanners/bots
+    hitting the public port with malformed requests) instead of dumping a traceback."""
+
+    daemon_threads = True
+
+    def handle_error(self, request, client_address):
+        exc = sys.exc_info()[1]
+        if isinstance(exc, (BrokenPipeError, ConnectionResetError, ConnectionAbortedError)):
+            return  # el cliente cerró la conexión; nada que hacer
+        print(f"[WARN] Error atendiendo request de {client_address}: {exc}", flush=True)
+
+
 def main():
     # Player names contain emojis / unicode; never let a print crash the tailer.
     try:
@@ -357,7 +370,7 @@ def main():
     except (AttributeError, ValueError):
         pass
     threading.Thread(target=tail_log, daemon=True).start()
-    server = ThreadingHTTPServer((API_HOST, API_PORT), Handler)
+    server = QuietHTTPServer((API_HOST, API_PORT), Handler)
     print(
         f"[INFO] Monitor API on http://{API_HOST}:{API_PORT} "
         f"(auth={'on' if API_TOKEN else 'off'}, "
