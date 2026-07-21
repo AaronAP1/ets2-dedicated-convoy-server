@@ -38,6 +38,31 @@ services:
       - "ETS_SERVER_MODERATORS=76561199220962922,76561198858304637,76561198681541887"
       # more variables...
 
+  # Monitor: lee el log en solo-lectura y expone un endpoint HTTP (JSON) con
+  # los conectados + eventos de entrada/salida, y avisa a Discord (opcional).
+  # Consulta:  curl http://<IP-DEL-VPS>:8080/status
+  ets2-monitor:
+    build: ./monitor
+    image: ets2-convoy-monitor
+    container_name: ets2-monitor
+    restart: unless-stopped
+    depends_on:
+      - ets2-server
+    ports:
+      - "8080:8080"
+    volumes:
+      # Mismo save-data del server, pero en SOLO LECTURA.
+      - "./save-data:/logs:ro"
+    environment:
+      - "MONITOR_LOG_FILE=/logs/server.log.txt"
+      - "MONITOR_PORT=8080"
+      - "MONITOR_SERVER_NAME=PERU IM"
+      # Token opcional para proteger el endpoint (vacío = abierto).
+      # Si lo pones, consulta con: -H "Authorization: Bearer <token>"
+      - "MONITOR_TOKEN="
+      # Webhook de Discord para avisos de conexión/desconexión (vacío = desactivado).
+      - "DISCORD_WEBHOOK_URL="
+
   # ats-server:
   #   image: lshallo/ats-convoy-server
   #   # image: ghcr.io/lshallo/ats-convoy-server # GitHub container registry
