@@ -25,7 +25,7 @@ services:
     # Also keeps banlist. If you want to persist the banlist mount this folder.
       - "./save-data:/home/steam/.local/share/Euro Truck Simulator 2"
     environment:
-      - "ETS_SERVER_UPDATE_ON_START=false"
+      - "ETS_SERVER_UPDATE_ON_START=true"
       - "ETS_SERVER_NAME=PERU IM"
       - "ETS_SERVER_DESCRIPTION=IMPeru Server"
       - "ETS_SERVER_WELCOME_MESSAGE=Bienvenido a IMPeru!"
