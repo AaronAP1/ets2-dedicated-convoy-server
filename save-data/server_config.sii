@@ -1,9 +1,9 @@
 SiiNunit
 {
 server_config : _nameless.3f5a.0340 {
- lobby_name: "PERU IM"
- description: "IMPeru Server"
- welcome_message: "Bienvenido a IMPeru!"
+ lobby_name: "NCS SERVER"
+ description: "NCS Server"
+ welcome_message: "Bienvenido a NCS SERVER!"
  password: ""
  max_players: 128
  max_vehicles_total: 100
@@ -26,9 +26,12 @@ server_config : _nameless.3f5a.0340 {
  name_tags: true
  friends_only: false
  show_server: true
- moderator_list: 2
- moderator_list[0]: 76561199220962922
- moderator_list[1]: 76561198858304637
+ moderator_list: 5
+ moderator_list[0]: 76561198994048942
+ moderator_list[1]: 76561198965657115
+ moderator_list[2]: 76561198097695858
+ moderator_list[3]: 76561199220962922
+ moderator_list[4]: 76561199346017148
 }
 
 }
