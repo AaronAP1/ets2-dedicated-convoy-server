@@ -25,7 +25,7 @@ services:
     # Also keeps banlist. If you want to persist the banlist mount this folder.
       - "./save-data:/home/steam/.local/share/Euro Truck Simulator 2"
     environment:
-      - "ETS_SERVER_UPDATE_ON_START=true"
+      - "ETS_SERVER_UPDATE_ON_START=false"
       - "ETS_SERVER_NAME=NCS SERVER [PE]"
       - "ETS_SERVER_DESCRIPTION=NCS Server Peruano"
       - "ETS_SERVER_WELCOME_MESSAGE=Bienvenido a NCS, Diviertete!"
@@ -35,7 +35,7 @@ services:
       - "ETS_SERVER_QUERY_PORT=27016"
       - "ETS_SERVER_LOGON_TOKEN=F492F770192BA0A0D636EF7AFB867F80"
       # Moderadores (SteamID64) separados por coma.
-      - "ETS_SERVER_MODERATORS=76561199220962922,76561198858304637,76561198681541887"
+      - "ETS_SERVER_MODERATORS=76561198994048942,76561198965657115,76561198097695858,76561199220962922,76561199346017148"
       # more variables...
 
   # Monitor: lee el log en solo-lectura y expone un endpoint HTTP (JSON) con
