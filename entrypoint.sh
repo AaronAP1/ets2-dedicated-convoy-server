@@ -4,15 +4,10 @@
 cp -n /default_packages/server_packages.sii "${SAVEGAME_LOCATION}"
 cp -n /default_packages/server_packages.dat "${SAVEGAME_LOCATION}"
 
-if [ "${ETS_SERVER_UPDATE_ON_START:-true}" = "true" ] || [ ! -x "${EXECUTABLE}" ]; then
-	echo "[INFO]: Updating ETS Server..."
-	beta_argument=""
-	if [ -n "${ETS_SERVER_BRANCH}" ]; then
-		beta_argument=" -beta ${ETS_SERVER_BRANCH}"
-	fi
-	/home/steam/steamcmd/steamcmd.sh +force_install_dir /app +login anonymous +app_update "${APP_ID}"${beta_argument} +quit
-	echo "[INFO]: Update done."
-fi
+# Generates server_config.sii from the ETS_SERVER_* env vars (incl. the logon
+# token that gives the server a persistent id), updates the server via steamcmd
+# and applies the >8 players workaround to config_ds.cfg.
+/usr/bin/python3 /ets_server_entrypoint.py
 
 echo "[INFO]: Starting server..."
 exec "$@"
