@@ -1,6 +1,6 @@
 SiiNunit
 {
-server_packages_info : _nameless.226.a05e.1708 {
+server_packages_info : _nameless.2b2.d773.7f88 {
  version: 1
  dlc_essential_list: 0
  dlc_non_essential_list: 10
@@ -14,87 +14,120 @@ server_packages_info : _nameless.226.a05e.1708 {
  dlc_non_essential_list[7]: 63651269
  dlc_non_essential_list[8]: 2152080662829
  dlc_non_essential_list[9]: 58739619063725
- mod_list: 7
- mod_list[0]: _nameless.226.a2ac.6218
- mod_list[1]: _nameless.226.a2ac.6418
- mod_list[2]: _nameless.226.a2ac.7098
- mod_list[3]: _nameless.226.a2ac.7b98
- mod_list[4]: _nameless.226.a2ac.7698
- mod_list[5]: _nameless.226.a2ac.6098
- mod_list[6]: _nameless.226.a2ac.6198
+ mod_list: 10
+ mod_list[0]: _nameless.2b0.968a.d388
+ mod_list[1]: _nameless.2b0.968a.e208
+ mod_list[2]: _nameless.2b0.968a.d808
+ mod_list[3]: _nameless.2b0.968a.d408
+ mod_list[4]: _nameless.2b0.968a.d888
+ mod_list[5]: _nameless.2b0.968a.d508
+ mod_list[6]: _nameless.2b0.968a.d608
+ mod_list[7]: _nameless.2b0.968a.da08
+ mod_list[8]: _nameless.2b0.968a.de08
+ mod_list[9]: _nameless.2b0.968a.e388
  map_name: "/map/peru.mbd"
  map_dimensions: (-859136000, -7168000, 1056768000, 13312000)
  roads_data_file_name: "/home/server_packages.dat"
- time_stamp: 1787468297
+ time_stamp: 1793486261
  time_compression: 8.495001
 }
 
-server_mod_detail : _nameless.226.a2ac.6218 {
- package_name: andes_MP
- mod_name: "PeruRoads - TeamAD"
- checksum: 8112460727826160880
- mod_id: 16864395433463068578
+server_mod_detail : _nameless.2b0.968a.d388 {
+ package_name: peruroads
+ mod_name: "Peru Roads Fix Andes MP"
+ checksum: 1736279575960369740
+ mod_id: 16177439013500582506
  workshop_mod: false
  optional_mod: false
  full_name: true
 }
 
-server_mod_detail : _nameless.226.a2ac.6418 {
- package_name: "patch_conexiones_peru.scs"
- mod_name: "Patch Ruta Extendida"
- checksum: 2994429884826677498
- mod_id: 2331402180990089798
+server_mod_detail : _nameless.2b0.968a.e208 {
+ package_name: Andes_MPM_1
+ mod_name: Andes_MPM_1
+ checksum: 10506413154151820380
+ mod_id: 6927045184230448838
  workshop_mod: false
  optional_mod: false
  full_name: true
 }
 
-server_mod_detail : _nameless.226.a2ac.7098 {
- package_name: andes_mp_1
- mod_name: andes_mp_1
- checksum: 8543004018919577481
- mod_id: 3029143749685440512
+server_mod_detail : _nameless.2b0.968a.d808 {
+ package_name: Andes_MPM_2
+ mod_name: Andes_MPM_2
+ checksum: 12258920038396990525
+ mod_id: 187059166807524700
  workshop_mod: false
  optional_mod: false
  full_name: true
 }
 
-server_mod_detail : _nameless.226.a2ac.7b98 {
- package_name: andes_mp_2
- mod_name: andes_mp_2
- checksum: 1492786312090396244
- mod_id: 3295404137158821764
+server_mod_detail : _nameless.2b0.968a.d408 {
+ package_name: Andes_Conexiones
+ mod_name: Andes_conexiones
+ checksum: 9320357609037473074
+ mod_id: 412918335044402807
  workshop_mod: false
  optional_mod: false
  full_name: true
 }
 
-server_mod_detail : _nameless.226.a2ac.7698 {
- package_name: fix
- mod_name: fix
- checksum: 14378610589552527059
- mod_id: 7931972844057441826
+server_mod_detail : _nameless.2b0.968a.d888 {
+ package_name: Andes_MPB_1
+ mod_name: Andes_MPB_1
+ checksum: 2701194928207704688
+ mod_id: 9024626561110508943
  workshop_mod: false
  optional_mod: false
  full_name: true
 }
 
-server_mod_detail : _nameless.226.a2ac.6098 {
- package_name: andes_mp_3
- mod_name: andes_mp_3
- checksum: 7915162048904607026
- mod_id: 15656462875670843641
+server_mod_detail : _nameless.2b0.968a.d508 {
+ package_name: Andes_MPB_2
+ mod_name: Andes_MPB_2
+ checksum: 9671924148515276924
+ mod_id: 15325896055336904525
  workshop_mod: false
  optional_mod: false
  full_name: true
 }
 
-server_mod_detail : _nameless.226.a2ac.6198 {
- package_name: andes_mp_4
- mod_name: andes_mp_4
- checksum: 2159734212019790125
- mod_id: 2903531978573958830
+server_mod_detail : _nameless.2b0.968a.d608 {
+ package_name: Andes_MPC
+ mod_name: Andes_MPC
+ checksum: 5032471557680461857
+ mod_id: 3100159027159748406
  workshop_mod: false
+ optional_mod: false
+ full_name: true
+}
+
+server_mod_detail : _nameless.2b0.968a.da08 {
+ package_name: Andes_MPF
+ mod_name: Andes_MPF
+ checksum: 13629395415885766739
+ mod_id: 14083725470644804446
+ workshop_mod: false
+ optional_mod: false
+ full_name: true
+}
+
+server_mod_detail : _nameless.2b0.968a.de08 {
+ package_name: Andes_MPT
+ mod_name: Andes_MPT
+ checksum: 301246466053281756
+ mod_id: 16072421225481712335
+ workshop_mod: false
+ optional_mod: true
+ full_name: true
+}
+
+server_mod_detail : _nameless.2b0.968a.e388 {
+ package_name: "mod_workshop_package.00000000E2803745"
+ mod_name: andes_MP_4
+ checksum: 17798393792572894106
+ mod_id: 3800053573
+ workshop_mod: true
  optional_mod: false
  full_name: true
 }
